@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Web3Infura',
-  tagline: 'Web3 infura document',
+  tagline: 'Web3 Infura Document',
   url: 'https://doc.web3infura.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
