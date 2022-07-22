@@ -21,7 +21,7 @@ everTx, err := sdk.PayOrder(order)
 ```
 返回值: [everTx](./类型.md#EverTx)
 
-note：若用户在 everpay 上面还没有资产，可以参考[这里](../../6.其他/2.获取AR钱包.md#获取AR)进行资产跨链
+note：若用户在 everpay 上面还没有资产，可以参考[这里](../../other/2.获取AR钱包.md#获取AR)进行资产跨链
 
 ## 发送数据+支付
 

@@ -12,4 +12,4 @@ const res = await submitByApikey(arseedingUrl,apikey,data,contentType, tags)
     itemId: "tSB2-PS3Qr-POmBgjIoi4wRYhhGq3UZ9uPO8dUf2LhM"
 }
 ```
-如何申请 apiKey 请跳转[申请 apiKey](../../../6.其他/arseeding%20apiKey.md)。
+如何申请 apiKey 请跳转[申请 apiKey](../../../other/arseeding%20apiKey.md)。

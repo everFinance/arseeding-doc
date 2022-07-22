@@ -29,7 +29,7 @@ const config = {
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -65,9 +65,33 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'introduction/arseeding - arweave 轻节点',
             position: 'left',
-            label: 'Arseeding',
+            label: '介绍',
+          },
+          {
+            type: 'doc',
+            docId: 'quickStart/快速入门指南',
+            position: 'left',
+            label: '快速入门',
+          },
+          {
+            type: 'doc',
+            docId: 'deploy/部署介绍',
+            position: 'left',
+            label: '部署轻节点',
+          },
+          {
+            type: 'doc',
+            docId: 'sdk/intro',
+            position: 'left',
+            label: 'SDK',
+          },
+          {
+            type: 'doc',
+            docId: 'api/intro',
+            position: 'left',
+            label: 'API',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -85,7 +109,7 @@ const config = {
             items: [
               {
                 label: 'Arseeding',
-                to: '/docs/intro',
+                to: '/docs/introduction/arseeding - arweave 轻节点',
               },
             ],
           },
@@ -120,7 +144,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} everFinance, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
