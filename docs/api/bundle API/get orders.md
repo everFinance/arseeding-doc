@@ -3,6 +3,9 @@
 - URL: ```/bundle/orders/:signer```
 - Query Params:
     - `cursorId`: (option) 返回列表中最后一个记录的id，用于分页。
+  
+params:   
+`signer`: bundle item 签名私钥对应的地址，ecc 或者 rsa 地址
 ##### Response
 ```js
 [

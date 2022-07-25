@@ -1,6 +1,9 @@
 ##### Request
 - Method: **GET**
 - URL: ```/bundle/itemIds/:arId```
+
+params:   
+`arId`: arweave 原生 tx id
 ##### Response
 ```js
 [

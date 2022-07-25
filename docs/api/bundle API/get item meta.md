@@ -1,6 +1,9 @@
 ##### Request
 - Method: **GET**
 - URL: ```/bundle/tx/:itemId```
+
+params:   
+`itemId`: bundle item Id
 ##### Response
 ```js
 {
