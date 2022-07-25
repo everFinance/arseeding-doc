@@ -67,31 +67,7 @@ const config = {
             type: 'doc',
             docId: 'introduction/arseeding - arweave 轻节点',
             position: 'left',
-            label: '介绍',
-          },
-          {
-            type: 'doc',
-            docId: 'quickStart/快速入门指南',
-            position: 'left',
-            label: '快速入门',
-          },
-          {
-            type: 'doc',
-            docId: 'deploy/部署介绍',
-            position: 'left',
-            label: '部署轻节点',
-          },
-          {
-            type: 'doc',
-            docId: 'sdk/intro',
-            position: 'left',
-            label: 'SDK',
-          },
-          {
-            type: 'doc',
-            docId: 'api/intro',
-            position: 'left',
-            label: 'API',
+            label: 'Arseeding',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
