@@ -5,11 +5,11 @@
 ```jsx
 const arseedUrl = '<https://arseed.web3infura.io>'
 const data = Buffer.from('need upload data ...')
-const payCurrency = 'USDC' // everpay supported all tokens,like 'AR','ETH','USDT' and so on
+const payCurrency = 'USDC' // everpay supported all tokens, like 'AR', 'ETH', 'USDT' and so on
 const ops = {
     tags: [
-        {name: "Content-Type",value:"data type"},
-        {name: "aa",value:"aaa"}
+        { name: 'Content-Type', value: 'data type' },
+        { name: 'aa', value: 'aaa' }
     ]
 }
 const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops)
@@ -54,24 +54,24 @@ const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops)
 ```jsx
 import { createAndSubmitItem } from 'arseeding-js'
 import EthereumSigner from 'arseeding-arbundles/src/signing/chains/ethereumSigner'
-import ArweaveSigner from "arseeding-arbundles/src/signing/chains/ArweaveSigner"
-import {readFileSync} from "fs"
-import path from "path"
+import ArweaveSigner from 'arseeding-arbundles/src/signing/chains/ArweaveSigner'
+import { readFileSync } from 'fs'
+import path from 'path'
 
 // use ecc signer
 const privateKey = '<your ecc private key>'
 const signer = new EthereumSigner(privateKey)
 // or use rsa signer
 const wallet = JSON.parse(
-    readFileSync(path.join(__dirname, "<your arweave keyfile>.json")).toString(),
-);
+    readFileSync(path.join(__dirname, '<your arweave keyfile>.json')).toString()
+)
 const signer = new ArweaveSigner(wallet)
 
 const data = '<need upload data, such as a picture>'
 const ops = {
     tags: [
         { name: 'key01', value: 'val01' },
-        { name: 'Content-Type', value: 'imag/png' } // you should set the data type tag
+        { name: 'Content-Type', value: 'image/png' } // you should set the data type tag
     ]
 }
 const arseedingUrl = '<https://arseed.web3infura.io>'
@@ -123,8 +123,8 @@ const arseedingUrl = '<https://arseed.web3infura.io>'
 const apikey = '<your arseeding apiKey>'
 const data = '<need upload data, such as a picture>'
 const contentType = 'image/png'
-const tags = {'a':'aa','b':'bb'}
-const res = await submitByApikey(arseedingUrl,apikey,data,contentType, tags)
+const tags = { 'a': 'aa', 'b': 'bb' }
+const res = await submitByApikey(arseedingUrl, apikey, data, contentType, tags)
 // 返回示例
 {
     itemId: "tSB2-PS3Qr-POmBgjIoi4wRYhhGq3UZ9uPO8dUf2LhM"
@@ -142,7 +142,7 @@ const res = await submitByApikey(arseedingUrl,apikey,data,contentType, tags)
 import { getOrders } from 'arseeding-js'
 const arseedingUrl = '<https://arseed.web3infura.io>'
 const address = '<your address>'
-const res = await getOrders(arseedingUrl,itemId)
+const res = await getOrders(arseedingUrl, address)
 
 // 返回示例
 [
@@ -178,7 +178,7 @@ const res = await getOrders(arseedingUrl,itemId)
 import { getItemMeta } from 'arseeding-js'
 const arseedingUrl = '<https://arseed.web3infura.io>'
 const itemId = '<itemId>'
-const res = await getItemMeta(arseedingUrl,itemId)
+const res = await getItemMeta(arseedingUrl, itemId)
 
 // 返回示例
 {
@@ -206,8 +206,8 @@ const res = await getItemMeta(arseedingUrl,itemId)
 import { getBundleFee } from 'arseeding-js'
 const arseedingUrl = '<https://arseed.web3infura.io>'
 const size = '<data binary length>'
-const currency = '<payment token symbol, such as eth,usdc. >'
-const res = await getBundleFee(arseedingUrl,size, currency)
+const currency = '<payment token symbol, such as eth, usdc. >'
+const res = await getBundleFee(arseedingUrl, size, currency)
 
 // 返回示例
 {
