@@ -34,7 +34,7 @@ tags 除了能标记你在 Arweave 上存储的数据，使其数据检索更加
 
 [https://viewblock.io/arweave/tx/Ah2IBjWgsbeCXDHaIToUfQhf-calg1qdMJgD7Wnxz1c](https://viewblock.io/arweave/tx/Ah2IBjWgsbeCXDHaIToUfQhf-calg1qdMJgD7Wnxz1c)
 
-<img src="https://arseed.web3infura.io/3zH1Ai9-qGTi1hhcnE1tYRutczuWgKB5KvLBJSSVatQ" height="60%" width="60%"/>
+<div align="center"><img src="https://arseed.web3infura.io/3zH1Ai9-qGTi1hhcnE1tYRutczuWgKB5KvLBJSSVatQ" height="60%" width="60%"/></div>
 
 通过 Arweave 网关链接直接渲染出图片
 
