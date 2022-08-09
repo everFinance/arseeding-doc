@@ -142,7 +142,7 @@ const config = {
               //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
               // },
               {
-                label: 'everPay',
+                label: 'EverPay',
                 href: 'https://everpay.io',
               },
               {
