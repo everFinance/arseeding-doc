@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "主页",
+    "description": "The title in the navbar"
+  },
+  "item.label.Arseeding": {
+    "message": "Arseeding",
+    "description": "Navbar item with label Arseeding"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

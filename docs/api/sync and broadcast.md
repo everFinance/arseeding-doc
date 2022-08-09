@@ -1,24 +1,24 @@
-# 同步和广播服务
+## Synchronization and broadcasting services
 
-一个 Arseeding 可以开启多个调度任务，开发者可以增加、查看和删除调度任务。
+Arseeding can open multiple scheduling tasks. Developers can add, view and delete scheduling tasks.
 
-调度任务分为三种类型：
+There are three types of scheduling tasks.
 
-1. Sync：向全网发起指定 arid 的数据同步任务。
-2. Broadcast：将指定 arid 的数据向全网进行广播。
-3. BroadcastMeta：将指定 arid 的 meta 信息向全网进行广播。
+1. Sync: Launch a data synchronization task to the whole network for the specified arid.
+2. Broadcast: Broadcast the data of the specified arid to the whole network.
+3. BroadcastMeta: Broadcast the meta information of the specified arid to the whole network.
 
-### 同步和广播
+### Synchronization and broadcasting
 
-开发者可以使用下列接口开启三种调度任务。
+Developers can enable three scheduling tasks using the following interfaces.
 
 **Request**
 
 - Method: **POST**
 - URL: `/task/:taskType/:arid`
-  - 同步 arTx: `/task/sync/DW02g9sZaajWHSb6BHZ7371qxhANizyxPfXpX7SS-Jg`
-  - 广播 arTx: `/task/broadcast/DW02g9sZaajWHSb6BHZ7371qxhANizyxPfXpX7SS-Jg`
-  - 只广播 arTx 元信息: `/task/broadcast_meta/DW02g9sZaajWHSb6BHZ7371qxhANizyxPfXpX7SS-Jg`
+  - Sync arTx: `/task/sync/DW02g9sZaajWHSb6BHZ7371qxhANizyxPfXpX7SS-Jg`
+  - Broadcast arTx: `/task/broadcast/DW02g9sZaajWHSb6BHZ7371qxhANizyxPfXpX7SS-Jg`
+  - Only broadcast arTx metadata: `/task/broadcast_meta/DW02g9sZaajWHSb6BHZ7371qxhANizyxPfXpX7SS-Jg`
 
 **Response**
 
@@ -26,9 +26,9 @@
 ok
 ```
 
-### 查看正在执行的任务
+### Inspect ongoing tasks
 
-开发者可以对调度任务进行查看和管理。
+Developers can view and manage scheduling tasks.
 
 **Request**
 
@@ -54,33 +54,32 @@ ok
 }
 ```
 
-`taskType`: 正在执行的任务类型
+`taskType`: the type of task being executed
 
-`countSuccessed`: 该任务当前成功交互的节点数量
+`countSuccessed`: the number of nodes that the task is currently interacting with successfully
 
-`countFailed`: 该任务当前失败交互的节点数量
+`countFailed`: the number of nodes that the task has failed to interact with
 
-`totalPeer`: 需要交互的总的节点数量
+`totalPeer`: the total number of nodes that need to be interacted with
 
-`timestamp`: 创建任务的时间戳
+`timestamp`: timestamp of the task creation
 
-`close`: false 代表任务未关闭状态
+`close`: false means the task is not closed
 
-### 停止任务
+### Kill task
 
-可以使用下面三种方法结束 Sync、Broadcast 和 BroadcastMeta 任务。
+The Sync, Broadcast and BroadcastMeta tasks can be terminated using the following three methods.
 
 **Request**
 
 - Method: **POST**
 - URL: `/task/kill/:taskType/:arid`
-  - 同步 kill: `/task/kill/sync/DW02g9sZaajWHSb6BHZ7371qxhANizyxPfXpX7SS-Jg`
-  - 广播 kill: `/task/kill/broadcast/DW02g9sZaajWHSb6BHZ7371qxhANizyxPfXpX7SS-Jg`
-  - 广播 arTx meta kill: `/task/kill/broadcast_meta/DW02g9sZaajWHSb6BHZ7371qxhANizyxPfXpX7SS-Jg`
+  - Sync kill: `/task/kill/sync/DW02g9sZaajWHSb6BHZ7371qxhANizyxPfXpX7SS-Jg`
+  - Broadcast kill: `/task/kill/broadcast/DW02g9sZaajWHSb6BHZ7371qxhANizyxPfXpX7SS-Jg`
+  - Broadcast arTx meta kill: `/task/kill/broadcast_meta/DW02g9sZaajWHSb6BHZ7371qxhANizyxPfXpX7SS-Jg`
 
 **Response**
 
 ```bash
 ok
 ```
-

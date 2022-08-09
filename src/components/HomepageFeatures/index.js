@@ -6,18 +6,18 @@ import Link from "@docusaurus/Link";
 
 const FeatureList = [
     {
-        title: <Translate>使用指南</Translate>,
-        to: 'docs/guide/详细指南',
+        title: <Translate>Guide</Translate>,
+        to: 'docs/guide/detail',
         src: require('../../../static/img/guide.png').default,
     },
     {
-        title: <Translate>部署轻节点</Translate>,
-        to: 'docs/deploy/部署介绍',
+        title: <Translate>Deploy</Translate>,
+        to: 'docs/deploy/intro',
         src: require('../../../static/img/deploy.png').default,
     },
     {
         title: 'SDK',
-        to: 'docs/sdk/arseeding-go/概览',
+        to: 'docs/sdk/arseeding-go/intro',
         src: require('../../../static/img/sdk.png').default,
     },
 ];

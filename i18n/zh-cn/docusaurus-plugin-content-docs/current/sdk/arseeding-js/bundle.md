@@ -1,20 +1,20 @@
-# Bundle
+# Submit Data
 
-### Upload data and pay fees
+### 上传数据并支付费用
 
 ```jsx
 const arseedUrl = '<https://arseed.web3infura.io>'
 const data = Buffer.from('need upload data ...')
-const payCurrency = 'USDC' // everpay supported all tokens,like 'AR','ETH','USDT' and so on
+const payCurrency = 'USDC' // everpay supported all tokens, like 'AR', 'ETH', 'USDT' and so on
 const ops = {
     tags: [
-        {name: "Content-Type",value:"data type"},
-        {name: "aa",value:"aaa"}
+        { name: 'Content-Type', value: 'data type' },
+        { name: 'aa', value: 'aaa' }
     ]
 }
 const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops)
 
-// Example Return
+// 返回示例
 {
     status: 'ok',
     everpayTx: {
@@ -47,38 +47,38 @@ const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops)
 
 ```
 
-`sendAndPay` will do both upload and payments, make sure your wallet has a sufficient amount of assets on everPay. If you’re using your own Arseeding node with No_Fee mode turned on, please use the "Upload data only" method for upload processing.
+`sendAndPay` 会同时完成上传和支付两个动作，请确保你的钱包在 everPay Protocol 上有充足的资产。如果使用自有 Arseeding 节点并打开 No_Fee 模式，请使用“只上传数据”的方式进行上传处理。
 
-### Upload data only
+### 只上传数据
 
 ```jsx
 import { createAndSubmitItem } from 'arseeding-js'
 import EthereumSigner from 'arseeding-arbundles/src/signing/chains/ethereumSigner'
-import ArweaveSigner from "arseeding-arbundles/src/signing/chains/ArweaveSigner"
-import {readFileSync} from "fs"
-import path from "path"
+import ArweaveSigner from 'arseeding-arbundles/src/signing/chains/ArweaveSigner'
+import { readFileSync } from 'fs'
+import path from 'path'
 
 // use ecc signer
 const privateKey = '<your ecc private key>'
 const signer = new EthereumSigner(privateKey)
 // or use rsa signer
 const wallet = JSON.parse(
-    readFileSync(path.join(__dirname, "<your arweave keyfile>.json")).toString(),
-);
+    readFileSync(path.join(__dirname, '<your arweave keyfile>.json')).toString()
+)
 const signer = new ArweaveSigner(wallet)
 
 const data = '<need upload data, such as a picture>'
 const ops = {
     tags: [
         { name: 'key01', value: 'val01' },
-        { name: 'Content-Type', value: 'imag/png' } // you should set the data type tag
+        { name: 'Content-Type', value: 'image/png' } // you should set the data type tag
     ]
 }
 const arseedingUrl = '<https://arseed.web3infura.io>'
 const currency = 'USDC' // everpay supported all tokens, like 'AR','ETH','USDT' and so on
 const order = await createAndSubmitItem(arseedingUrl, signer, data, ops, currency)
 
-// Example Return
+// 返回示例
 {
     itemId: 'XTnZ26gmangoxn7BBXXXabZhxf-BQgnI-x8p1xNUDdA',
     bundler: 'uDA8ZblC-lyEFfsYXKewpwaX-kkNDDw8az3IW9bDL68',
@@ -90,11 +90,11 @@ const order = await createAndSubmitItem(arseedingUrl, signer, data, ops, currenc
 }
 ```
 
-`createAndSubmitItem` will upload data. If you use the Arseeding service provided by web3infura, you need to pay for the response order, otherwise the data will clear after 60 minutes. Once the payment is made, web3infura will 100% guarantee the upload of this data to the Arweave network.
+`createAndSubmitItem` 将进行数据上传。如果使用 web3infura 提供的 Arseeding 服务，需要对 Response 的订单进行支付，否则数据将在 60 分钟后清空。完成费用支付，web3infura 将 100% 保证该数据上传到 Arweave 网络。
 
-If you turn on No_Fee mode using your own node, no additional payment work is required.
+如果使用自有节点打开 No_Fee 模式，无需再进行额外的支付工作。
 
-### Pay for order
+### 为 order 支付费用
 
 ```jsx
 import { newEverpayByEcc, newEverpayByRSA, payOrder } from 'arseeding-js'
@@ -111,11 +111,11 @@ const pay = newEverpayByRSA(arJWK, arAddress)
 const everHash = await payOrder(pay, order)
 ```
 
-`payOrder` will complete a payment for an uploaded order. This feature provides the ability to pay on behalf of a service provider who can store payments for a specified user.
+`payOrder` 将完成一笔上传订单的支付。该功能提供了代付的能力，服务商可以为指定的用户进行存储付费。
 
 # Submit Data By ApiKey
 
-### Use apiKey to upload raw data directly
+### 通过 apiKey 的方式可以直接提交原始数据
 
 ```jsx
 import { submitByApikey } from 'arseeding-js'
@@ -123,28 +123,28 @@ const arseedingUrl = '<https://arseed.web3infura.io>'
 const apikey = '<your arseeding apiKey>'
 const data = '<need upload data, such as a picture>'
 const contentType = 'image/png'
-const tags = {'a':'aa','b':'bb'}
-const res = await submitByApikey(arseedingUrl,apikey,data,contentType, tags)
-// Example Return
+const tags = { 'a': 'aa', 'b': 'bb' }
+const res = await submitByApikey(arseedingUrl, apikey, data, contentType, tags)
+// 返回示例
 {
     itemId: "tSB2-PS3Qr-POmBgjIoi4wRYhhGq3UZ9uPO8dUf2LhM"
 }
 
 ```
 
-To request an apiKey, please contact the everFinance Team.
+如何申请 apiKey 请联系 everFinance Team。
 
 # Get Orders
 
-### Get all orders for address
+### 获取 address 所有的 order
 
 ```jsx
 import { getOrders } from 'arseeding-js'
 const arseedingUrl = '<https://arseed.web3infura.io>'
 const address = '<your address>'
-const res = await getOrders(arseedingUrl,itemId)
+const res = await getOrders(arseedingUrl, address)
 
-// Example Return
+// 返回示例
 [
     {
         "id": 13,
@@ -168,19 +168,19 @@ const res = await getOrders(arseedingUrl,itemId)
 
 ```
 
-This interface allows you to get all data upload orders for a certain address. The service provider can subscribe to the upload orders for the user's address and perform the payment service on behalf of the user.
+通过该接口可以获得某个地址所有的数据上传订单。服务商可以订阅用户地址的上传订单，为用户进行代付服务。
 
 # Get Item Meta
 
-### Get item meta by itemId
+### 通过 itemId 获取 item meta
 
-```jsx
+```js
 import { getItemMeta } from 'arseeding-js'
 const arseedingUrl = '<https://arseed.web3infura.io>'
 const itemId = '<itemId>'
-const res = await getItemMeta(arseedingUrl,itemId)
+const res = await getItemMeta(arseedingUrl, itemId)
 
-// Example Return
+// 返回示例
 {
     "signatureType": 1,
     "signature": "D0G5Sm-UWdNyxy-jmFKx7yYF0s0QxtO2THJtZ_duFntdmgfT15aHTU9H2-DENoZ-SdYvgFwH1_1fpTWtxQ6EhWrvSdPV6O--hOFAqdTAF-dH9-Krk_MyCf0YOhaV6JrUDam1j9cKcZGH7Ra-mmo3jdZKUtf9OxPjeZMl5DZCY_N9G9gEnI6nQ2VTVhcb8Yrjo3kalARFhwMU-MOw_vHtVQSv7gfSvabWqUQ5WrsJ7ULPqoY63bKQJ9BjRoq0E1B36upmwHkGRyJ7smLay0YJeRb8DXNUkQJm0Gm9TkQ632m4muWEwdDGpelji9CkqIFQWTLZ7iHPzgMSJivkstPLhDHd5wrK5osPImdGODf8bPmgKwZrWDmxxTByVk8AhOchNuoArEXnAUcaoDGnBWPE6KdHUPPSYoF1elm3kWRmZ-GMgtKEPp9AAPtFQ7ANk-nBQd88QvPsNpipgqIBG6VMMBFxP1GWn2jrlBxY5UIb_8Pc6dCN_t9EoUTsApe5XYsx_S2dCou3WNmEx2GvPfcrdQQmqSrxbmFNaE6-V-7N1oe3AAfd0SJgRKheKmC0vIrzaChQUFEiZb0yutWEUi0au8gAi8LzsmtkFKbGlgf3_w0F_p_x53Ay_qQvrghvC3dkfahmIV9JxaiYPXC0d9kNqBEBGZU0gUw4yL787TRrObo",
@@ -201,7 +201,7 @@ const res = await getItemMeta(arseedingUrl,itemId)
 
 # Get Bundle Fee
 
-### Query bundle item storage costs
+### 查询 bundle item 存储费用
 ```js
 import { getBundleFee } from 'arseeding-js'
 const arseedingUrl = '<https://arseed.web3infura.io>'

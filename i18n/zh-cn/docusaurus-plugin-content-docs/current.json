@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Introduction": {
+    "message": "Arseeding 介绍",
+    "description": "The label for category Introduction in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Guide": {
+    "message": "使用指南",
+    "description": "The label for category Guide in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Deploy": {
+    "message": "部署服务",
+    "description": "The label for category Deploy in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.SDK": {
+    "message": "SDK",
+    "description": "The label for category SDK in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.arseeding-go": {
+    "message": "arseeding-go",
+    "description": "The label for category arseeding-go in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.arseeding-js": {
+    "message": "arseeding-js",
+    "description": "The label for category arseeding-js in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.API": {
+    "message": "API",
+    "description": "The label for category API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Other": {
+    "message": "其他",
+    "description": "The label for category Other in sidebar tutorialSidebar"
+  }
+}

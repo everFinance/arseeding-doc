@@ -1,10 +1,10 @@
-## Installation
+## 安装
 
 ```python
 pip install arseeding
 ```
 
-## Usage
+## 数据上传
 ```python
 import arseeding, everpay
 

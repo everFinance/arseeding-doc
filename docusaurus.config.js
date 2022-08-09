@@ -1,13 +1,14 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Web3Infura',
-  tagline: '开发者文档',
+  // tagline: '开发者文档',
   url: 'https://doc.web3infura.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -17,14 +18,24 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'everFinance', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  projectName: 'arseeding-doc', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'zh-cn'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+      },
+      'zh-cn': {
+        label: '简体中文',
+        direction: 'ltr',
+      },
+    },
   },
 
   presets: [
@@ -65,11 +76,15 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'introduction/arseeding - arweave 轻节点',
+            docId: 'introduction/lightNode',
             position: 'left',
             label: 'Arseeding',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
           {
             href: 'https://github.com/everFinance/arseeding',
             label: 'GitHub',
@@ -85,7 +100,7 @@ const config = {
             items: [
               {
                 label: 'Arseeding',
-                to: '/docs/introduction/arseeding - arweave 轻节点',
+                to: '/docs/introduction/lightNode',
               },
             ],
           },

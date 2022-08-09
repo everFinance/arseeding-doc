@@ -1,8 +1,8 @@
-## Bundle Service
+# Bundle 服务
 
 ### Get Bundler
 
-Get the wallet address for the Arseeding Bundle service. This wallet is used for ANS-104 data uploads, and everPay is used to charge for the upload service.
+获取 Arseeding Bundle 服务的钱包地址。该钱包用于 ANS-104 数据上传，并使用 everPay 收取上传服务费。
 
 **Request**
 
@@ -11,22 +11,22 @@ Get the wallet address for the Arseeding Bundle service. This wallet is used for
 
 **Response**
 
-```bash
+```json
 {
     "bundler": "uDA8ZblC-lyEFfsYXKewpwaX-kkNDDw8az3IW9bDL68"
 }
 ```
 
-### Submit Bundle Items
+### Submit Bundle Item
 
-Submit the Bundle Item to the Arseeding node.
+将 Bundle Item 提交到 Arseeding 节点。
 
 **Request**
 
 - Method: **POST**
 - URL: `/bundle/tx/:currency`
-  - Pay with USDC：`/bundle/tx/USDC`
-  - Pay with AR：`/bundle/tx/AR`
+    - 使用 USDC 支付：`/bundle/tx/USDC`
+    - 使用 AR 支付：`/bundle/tx/AR`
 - Headers: Content-Type:application/octet-stream
 - Body:
   --data-binary 'bundle item data'
@@ -46,9 +46,9 @@ Submit the Bundle Item to the Arseeding node.
 
 ```
 
-### Submit Bundle Data By an ApiKey
+### Submit Bundle Data By ApiKey
 
-Use X-API-KEY to submit data to Arseeding.
+使用 X-API-KEY 提交数据到 Arseeding。
 
 **Request**
 
@@ -66,11 +66,11 @@ Use X-API-KEY to submit data to Arseeding.
 
 ```
 
-Note: If you would like to upload data in the web3infura service using the apiKey method, please contact the everFinance Team.
+注意：如果你想使用 apiKey 的方式在 web3infura 服务中上传数据，请联系 everFinance Team。
 
 ### Get Bundle Fee
 
-Check the transaction fees for uploading data.
+查看上传数据的交易手续费。
 
 **Request**
 
@@ -79,9 +79,9 @@ Check the transaction fees for uploading data.
 
 params:
 
-`size`: the binary length of the data to be uploaded.
+`size`: 需要上传的 data binary length.
 
-`currency`: token symbol for payment fee, supports all cross-chain tokens of everpay.
+`currency`: 用于支付 fee 的 token symbol, 支持 everpay 跨链的所有 token.
 
 **Response**
 
@@ -96,18 +96,18 @@ params:
 
 ### Get Bundle Orders
 
-View Bundle order status.
+查看 Bundle 订单状态。
 
 **Request**
 
 - Method: **GET**
 - URL: `/bundle/orders/:signer`
 - Query Params:
-  - `cursorId`: (option) Return the id of the last record in the list, used for paging.
+    - `cursorId`: (option) 返回列表中最后一个记录的id，用于分页。
 
 Params:
 
-`signer`: The address corresponding to the signature private key, ecc or rsa address of bundle item.
+`signer`: bundle item 签名私钥对应的地址，ecc 或者 rsa 地址
 
 **Response**
 
@@ -137,7 +137,7 @@ Params:
 
 ### Get Item Meta
 
-Get the Meta information of the Bundle Item.
+获得 Bundle Item 的 Meta 信息。
 
 **Request**
 
@@ -179,7 +179,7 @@ Params:
 
 ### Get Items By ArId
 
-Get all Bundle Items under one Arweave tx.
+获得一笔 Arweave 交易下的所有 Bundle Items。
 
 **Request**
 
@@ -188,7 +188,7 @@ Get all Bundle Items under one Arweave tx.
 
 Params:
 
-`arId`: arweave  tx id
+`arId`: arweave 原生 tx id
 
 **Response**
 ```Bash
