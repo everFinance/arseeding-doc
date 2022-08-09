@@ -134,6 +134,31 @@ const config = {
               },
             ],
           },
+          {
+            title: 'Used By',
+            items: [
+              // {
+              //   label: 'Stack Overflow',
+              //   href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              // },
+              {
+                label: 'everPay',
+                href: 'https://everpay.io',
+              },
+              {
+                label: 'Permaswap',
+                href: 'https://permaswap.network/#/',
+              },
+              {
+                label: 'EthSign',
+                href: 'https://www.ethsign.xyz',
+              },
+              {
+                label: 'Relation Labs',
+                href: 'https://relationlabs.ai/#/home',
+              },
+            ],
+          },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} everFinance, Inc. Built with Docusaurus.`,
       },
