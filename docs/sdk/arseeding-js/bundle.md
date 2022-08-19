@@ -90,7 +90,7 @@ const order = await createAndSubmitItem(arseedingUrl, signer, data, ops, currenc
 }
 ```
 
-`createAndSubmitItem` will upload data. If you use the Arseeding service provided by web3infura, you need to pay for the response order, otherwise the data will clear after 60 minutes. Once the payment is made, web3infura will 100% guarantee the upload of this data to the Arweave network.
+`createAndSubmitItem` will upload data. If you use the Arseeding service provided by web3infra, you need to pay for the response order, otherwise the data will clear after 60 minutes. Once the payment is made, web3infra will 100% guarantee the upload of this data to the Arweave network.
 
 If you turn on No_Fee mode using your own node, no additional payment work is required.
 

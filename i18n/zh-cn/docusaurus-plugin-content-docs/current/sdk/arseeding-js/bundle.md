@@ -90,7 +90,7 @@ const order = await createAndSubmitItem(arseedingUrl, signer, data, ops, currenc
 }
 ```
 
-`createAndSubmitItem` 将进行数据上传。如果使用 web3infura 提供的 Arseeding 服务，需要对 Response 的订单进行支付，否则数据将在 60 分钟后清空。完成费用支付，web3infura 将 100% 保证该数据上传到 Arweave 网络。
+`createAndSubmitItem` 将进行数据上传。如果使用 web3infra 提供的 Arseeding 服务，需要对 Response 的订单进行支付，否则数据将在 60 分钟后清空。完成费用支付，web3infra 将 100% 保证该数据上传到 Arweave 网络。
 
 如果使用自有节点打开 No_Fee 模式，无需再进行额外的支付工作。
 
