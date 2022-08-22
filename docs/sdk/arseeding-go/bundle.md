@@ -50,7 +50,7 @@ everTx, itemId, err := sdk.SendDataAndPay(data, currency, &schema.OptionItem{Tag
 Arseeding can provide [API Keys](../../other/arseeding%20apiKey.md) for users to upload data directly without having to make payments.
 
 ```go
-arseedUrl := "<https://arseed.web3infura.io>"
+arseedUrl := "<https://arseed.web3infra.dev>"
 cli := sdk.New(arseedUrl)
 
 apiKey := "aabbccddeee..."
@@ -70,7 +70,7 @@ fmt.Println("itemId: %s",res.ItemId)
 Returns the cost value based on the amount of data you need to upload.
 
 ```go
-arseedUrl := "<https://arseed.web3infura.io>"
+arseedUrl := "<https://arseed.web3infra.dev>"
 cli := sdk.New(arseedUrl)
 
 resFee, err := cli.BundleFee(dataSize, currency)
@@ -83,7 +83,7 @@ Return: [resFee](type.md#fee)
 Look up all Bundle data upload orders for a user by their address for that address.
 
 ```
-arseedUrl := "<https://arseed.web3infura.io>"
+arseedUrl := "<https://arseed.web3infra.dev>"
 cli := sdk.New(arseedUrl)
 
 resOrders, err := cli.GetOrders(addr)

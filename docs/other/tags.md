@@ -36,7 +36,7 @@ Add Content-Type: image/png to tags to declare the data type
 
 [https://viewblock.io/arweave/tx/Ah2IBjWgsbeCXDHaIToUfQhf-calg1qdMJgD7Wnxz1c](https://viewblock.io/arweave/tx/Ah2IBjWgsbeCXDHaIToUfQhf-calg1qdMJgD7Wnxz1c)
 
-<div align="center"><img src="https://arseed.web3infura.io/3zH1Ai9-qGTi1hhcnE1tYRutczuWgKB5KvLBJSSVatQ" height="60%" width="60%"/></div>
+<div align="center"><img src="https://arseed.web3infra.dev/3zH1Ai9-qGTi1hhcnE1tYRutczuWgKB5KvLBJSSVatQ" height="60%" width="60%"/></div>
 
 Render images directly in browser through the Arweave gateway link
 

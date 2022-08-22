@@ -7,7 +7,7 @@ For more information on Sync and Broadcast tasks, please refer to the [API docum
 Arseeding as a light node can synchronize specified AR transactions and their data.
 
 ```go
-arseedUrl := "<https://arseed.web3infura.io>"
+arseedUrl := "<https://arseed.web3infra.dev>"
 cli := sdk.New(arseedUrl)
 
 err := cli.Sync(arId)
@@ -18,7 +18,7 @@ err := cli.Sync(arId)
 Arseeding can broadcast AR transactions to all valid Arweave nodes across the network, allowing the transaction and data to be stored on as many different nodes as possible.
 
 ```go
-arseedUrl := "<https://arseed.web3infura.io>"
+arseedUrl := "<https://arseed.web3infra.dev>"
 cli := sdk.New(arseedUrl)
 
 err := cli.BroadcastTxData(arId)
@@ -29,7 +29,7 @@ err := cli.BroadcastTxData(arId)
 Arseeding can broadcast an AR transaction without data to all valid Arweave nodes across the network so that the transaction is synchronized across the network as soon as possible.
 
 ```go
-arseedUrl := "<https://arseed.web3infura.io>"
+arseedUrl := "<https://arseed.web3infra.dev>"
 cli := sdk.New(arseedUrl)
 
 err := cli.BroadcastTxMeta(arId)
@@ -40,7 +40,7 @@ err := cli.BroadcastTxMeta(arId)
 Each task takes time to execute, and developers can check the status of the task through the SDK.
 
 ```go
-arseedUrl := "<https://arseed.web3infura.io>"
+arseedUrl := "<https://arseed.web3infra.dev>"
 cli := sdk.New(arseedUrl)
 
 task := cli.GetBroadcastTask(arId) // 获取广播任务
@@ -53,7 +53,7 @@ Return value: [task](type.md#task)
 
 You can use this interface to kill a task if it has been unresponsive for a while or if you need to stop it.
 ```go
-arseedUrl := "<https://arseed.web3infura.io>"
+arseedUrl := "<https://arseed.web3infra.dev>"
 cli := sdk.New(arseedUrl)
 
 err := cli.KillBroadcastTask(arId)

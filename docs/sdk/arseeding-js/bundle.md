@@ -3,7 +3,7 @@
 ### Upload data and pay fees
 
 ```jsx
-const arseedUrl = '<https://arseed.web3infura.io>'
+const arseedUrl = '<https://arseed.web3infra.dev>'
 const data = Buffer.from('need upload data ...')
 const payCurrency = 'USDC' // everpay supported all tokens,like 'AR','ETH','USDT' and so on
 const ops = {
@@ -74,7 +74,7 @@ const ops = {
         { name: 'Content-Type', value: 'imag/png' } // you should set the data type tag
     ]
 }
-const arseedingUrl = '<https://arseed.web3infura.io>'
+const arseedingUrl = '<https://arseed.web3infra.dev>'
 const currency = 'USDC' // everpay supported all tokens, like 'AR','ETH','USDT' and so on
 const order = await createAndSubmitItem(arseedingUrl, signer, data, ops, currency)
 
@@ -119,7 +119,7 @@ const everHash = await payOrder(pay, order)
 
 ```jsx
 import { submitByApikey } from 'arseeding-js'
-const arseedingUrl = '<https://arseed.web3infura.io>'
+const arseedingUrl = '<https://arseed.web3infra.dev>'
 const apikey = '<your arseeding apiKey>'
 const data = '<need upload data, such as a picture>'
 const contentType = 'image/png'
@@ -140,7 +140,7 @@ To request an apiKey, please contact the everFinance Team.
 
 ```jsx
 import { getOrders } from 'arseeding-js'
-const arseedingUrl = '<https://arseed.web3infura.io>'
+const arseedingUrl = '<https://arseed.web3infra.dev>'
 const address = '<your address>'
 const res = await getOrders(arseedingUrl,itemId)
 
@@ -176,7 +176,7 @@ This interface allows you to get all data upload orders for a certain address. T
 
 ```jsx
 import { getItemMeta } from 'arseeding-js'
-const arseedingUrl = '<https://arseed.web3infura.io>'
+const arseedingUrl = '<https://arseed.web3infra.dev>'
 const itemId = '<itemId>'
 const res = await getItemMeta(arseedingUrl,itemId)
 
@@ -204,7 +204,7 @@ const res = await getItemMeta(arseedingUrl,itemId)
 ### Query bundle item storage costs
 ```js
 import { getBundleFee } from 'arseeding-js'
-const arseedingUrl = '<https://arseed.web3infura.io>'
+const arseedingUrl = '<https://arseed.web3infra.dev>'
 const size = '<data binary length>'
 const currency = '<payment token symbol, such as eth, usdc. >'
 const res = await getBundleFee(arseedingUrl, size, currency)

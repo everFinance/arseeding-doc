@@ -9,7 +9,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Web3Infra',
   // tagline: '开发者文档',
-  url: 'https://doc.web3infura.io',
+  url: 'https://doc.web3infra.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

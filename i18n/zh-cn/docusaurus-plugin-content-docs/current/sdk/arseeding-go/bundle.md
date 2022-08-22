@@ -49,7 +49,7 @@ everTx, itemId, err := sdk.SendDataAndPay(data, currency, &schema.OptionItem{Tag
 Arseeding 可以提供 [API Key](../../other/arseeding%20apiKey.md) 供用户直接上传数据而无需进行支付。
 
 ```go
-arseedUrl := "<https://arseed.web3infura.io>"
+arseedUrl := "<https://arseed.web3infra.dev>"
 cli := sdk.New(arseedUrl)
 
 apiKey := "aabbccddeee..."
@@ -69,7 +69,7 @@ fmt.Println("itemId: %s",res.ItemId)
 根据你需要上传的数据量，返回费用值。
 
 ```go
-arseedUrl := "<https://arseed.web3infura.io>"
+arseedUrl := "<https://arseed.web3infra.dev>"
 cli := sdk.New(arseedUrl)
 
 resFee, err := cli.BundleFee(dataSize, currency)
@@ -82,7 +82,7 @@ resFee, err := cli.BundleFee(dataSize, currency)
 通过用户的地址查询该地址的所有 Bundle 数据上传订单。
 
 ```
-arseedUrl := "<https://arseed.web3infura.io>"
+arseedUrl := "<https://arseed.web3infra.dev>"
 cli := sdk.New(arseedUrl)
 
 resOrders, err := cli.GetOrders(addr)
