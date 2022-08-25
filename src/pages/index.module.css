@@ -4,28 +4,43 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 8rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
+@media (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 48px 26px !important;
   }
 }
 
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 100px;
 }
 
 .web3infraDes {
-  font-size: 25px;
-  text-align: center;
-  font-family: "Times New Roman", Times, serif;
-  margin-bottom: 50px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  width: 986px;
+  color: rgba(255,255,255,0.85);
+  line-height: 22px;
+  /* or 140% */
+  margin: 0 auto 64px;
+}
+@media (max-width: 1000px) {
+  .web3infraDes{
+    width: auto !important;
+    margin: 0 auto 32px !important;
+  }
 }

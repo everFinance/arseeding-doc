@@ -14,7 +14,7 @@ function HomepageHeader() {
   console.log(siteConfig)
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
+      <div className={styles.container}>
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className={styles.web3infraDes}><Translate>The Web3Infra tool has you developers covered. It's Easy-to-use, has high-performing Arweave light nodes and gateways. Making it as easy as "copy-paste" when building on Web3.
         </Translate></p>

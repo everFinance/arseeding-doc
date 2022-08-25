@@ -4,14 +4,43 @@
   padding: 2rem 0;
   width: 100%;
 }
-
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+}
 .featureSvg {
   height: 200px;
   width: 200px;
+  margin-bottom: 14px;
 }
 .link {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 200px;
   color: inherit;
 }
 .link:hover {
   text-decoration: none;
+}
+.textLink{
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 500;
+  text-align: center;
+}
+@media (max-width:1000px) {
+  .row{
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .textLink{
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

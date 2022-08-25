@@ -24,12 +24,12 @@ const FeatureList = [
 
 function Feature({src, title, to}) {
     return (
-        <Link className={clsx('col', styles.link)} to={to}>
+        <Link className={styles.link} to={to}>
             <div className="text--center">
                 <img className={styles.featureSvg} alt={title} src={src} />
             </div>
-            <div className="text--center padding-horiz--md">
-                <h3>{title}</h3>
+            <div>
+                <h3 className={styles.textLink}>{title}</h3>
             </div>
         </Link>
     );
@@ -38,8 +38,8 @@ function Feature({src, title, to}) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
+      <div className={styles.container}>
+        <div className={styles.row}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
