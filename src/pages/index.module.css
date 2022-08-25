@@ -20,4 +20,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 100px;
+}
+
+.web3infraDes {
+  font-size: 25px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 50px;
 }
