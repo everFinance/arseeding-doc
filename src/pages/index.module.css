@@ -43,13 +43,13 @@
 
 .web3infraDes {
   font-style: normal;
-  font-weight: 500;
-  font-size: 17px;
-  width: 820px;
-  color: rgba(255,255,255,0.85);
-  line-height: 26px;
+  font-weight: 600;
+  font-size: 18px;
+  width: 840px;
+  color: rgba(255,255,255,0.76);
+  line-height: 28px;
   /* or 140% */
-  margin: 0 auto 64px;
+  margin: 20px auto 60px;
 }
 @media (max-width: 1000px) {
   .web3infraDes{
