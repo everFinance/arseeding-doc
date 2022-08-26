@@ -48,17 +48,17 @@ html[data-theme='dark'] .features{
   .usedBy{
     margin-top: 16px !important;
     margin-bottom: 40px !important;
-    font-size: 22px !important;
+    font-size: 24px !important;
     line-height: 30px !important;
   }
 }
 .usedBy {
   margin-top: 48px;
-  margin-bottom: 60px;
+  margin-bottom: 64px;
   text-align: center;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 39px;
-  font-weight: 600;
+  font-weight: 700;
 }
 .link {
   min-width: 252px;
