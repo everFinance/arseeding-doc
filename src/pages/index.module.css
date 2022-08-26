@@ -4,7 +4,7 @@
  */
 
 .heroBanner {
-  padding: 8rem 0;
+  padding: 100px 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -26,13 +26,26 @@
   align-items: center;
   justify-content: center;
 }
+.btnName{
+  color: black;
+  background-color: #E5E5E5;
+  padding: 8px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  text-decoration: none !important;
+}
+.btnName:hover{
+  color: black !important;
+}
+
 
 .web3infraDes {
-  font-family: Inter;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  width: 986px;
+  font-size: 16px;
+  width: 820px;
   color: rgba(255,255,255,0.85);
   line-height: 22px;
   /* or 140% */

@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import Link from "@docusaurus/Link";
+import Translate from "@docusaurus/Translate";
 
 
 const PartnerList = [
@@ -71,7 +72,7 @@ export default function PartnerFeatures() {
   return (
     <section className={styles.features}>
       <div className={styles.container}>
-          <div className={styles.usedBy}>Used By & Supported</div>
+          <div className={styles.usedBy}><Translate>Used & Supported by</Translate></div>
         <div className={styles.partnerBox}>
           {PartnerList[0].map((props, idx) => (
               <Partner key={idx} {...props} />

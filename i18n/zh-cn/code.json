@@ -264,5 +264,8 @@
   },
   "The Web3Infra tool has you developers covered. It's Easy-to-use, has high-performing Arweave light nodes and gateways. Making it as easy as \"copy-paste\" when building on Web3.": {
     "message": "web3infra 汇集了您在 Arweave 上开始构建所需的一切，高可用的轻节点服务，轻量级的网关服务等。"
+  },
+  "Used & Supported by": {
+    "message": "集成和支持"
   }
 }
