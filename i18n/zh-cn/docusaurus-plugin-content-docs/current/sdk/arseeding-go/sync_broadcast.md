@@ -1,3 +1,4 @@
+# 同步和广播
 关于 Sync 和 Broadcast 任务的详情，请参考 [API 文档](../../api/0.intro.md) 。
 
 ## 同步 AR 交易
