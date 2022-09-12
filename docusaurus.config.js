@@ -135,6 +135,12 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      metadata: [
+        {name: 'twitter:site', content: '@financeEver'},
+        {name:'twitter:title', content: 'Web3Infra'},
+        {name:'twitter:description', content: 'The Web3Infra tool has you developers covered.'},
+        {name: 'twitter:image', content: 'https://html.sammy-codes.com/images/large-profile.jpg'},
+      ],
     }),
 };
 
