@@ -136,10 +136,11 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       metadata: [
+        {name: 'twitter:card', content: 'summary'},
         {name: 'twitter:site', content: '@financeEver'},
         {name:'twitter:title', content: 'Web3Infra'},
         {name:'twitter:description', content: 'The Web3Infra tool has you developers covered.'},
-        {name: 'twitter:image', content: 'https://html.sammy-codes.com/images/large-profile.jpg'},
+        {name: 'twitter:image', content: 'https://arseed.web3infra.dev/37V04B8otZHoNSIJ8QTiZp38fN1Uo60rNQ9bSI-GQWA'},
       ],
     }),
 };
