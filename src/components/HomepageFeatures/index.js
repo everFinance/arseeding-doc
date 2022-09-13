@@ -7,17 +7,17 @@ import Link from "@docusaurus/Link";
 const FeatureList = [
     {
         title: <Translate>Guide</Translate>,
-        to: 'docs/guide/detail',
+        to: 'docs/arseeding/guide/detail',
         src: require('../../../static/img/guide.png').default,
     },
     {
         title: <Translate>Deploy</Translate>,
-        to: 'docs/deploy/0.0.intro.md',
+        to: 'docs/arseeding/deploy/intro',
         src: require('../../../static/img/deploy.png').default,
     },
     {
         title: 'SDK',
-        to: 'docs/sdk/arseeding-go/0.0.intro.md',
+        to: 'docs/arseeding/sdk/arseeding-go/intro',
         src: require('../../../static/img/sdk.png').default,
     },
 ];
