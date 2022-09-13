@@ -34,5 +34,17 @@
   "link.item.label.Goar": {
     "message": "Goar",
     "description": "The label of footer link with label=Goar linking to /docs/goar/introduction/intro"
+  },
+  "link.item.label.Arsyncer": {
+    "message": "Arsyncer",
+    "description": "The label of footer link with label=Arsyncer linking to /docs/arsyncer/introduction/intro"
+  },
+  "link.item.label. ": {
+    "message": "Goar",
+    "description": "The label of footer link with label=  linking to /docs/goar/introduction/intro"
+  },
+  "link.item.label.  ": {
+    "message": "Arsyncer",
+    "description": "The label of footer link with label=   linking to /docs/arsyncer/introduction/intro"
   }
 }

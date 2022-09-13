@@ -78,13 +78,13 @@ const config = {
             type: 'doc',
             docId: 'goar/introduction/intro',
             position: 'left',
-            label: 'Goar',
+            label: ' ',
           },
           {
             type: 'doc',
             docId: 'arsyncer/introduction/intro',
             position: 'left',
-            label: 'Arsyncer',
+            label: '  ',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -109,11 +109,11 @@ const config = {
                 to: '/docs/arseeding/introduction/lightNode',
               },
               {
-                label: 'Goar',
+                label: ' ',
                 to: '/docs/goar/introduction/intro',
               },
               {
-                label: 'Arsyncer',
+                label: '  ',
                 to: '/docs/arsyncer/introduction/intro',
               },
             ],
