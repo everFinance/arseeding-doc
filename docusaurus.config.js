@@ -70,9 +70,21 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'introduction/lightNode',
+            docId: 'arseeding/introduction/lightNode',
             position: 'left',
             label: 'Arseeding',
+          },
+          {
+            type: 'doc',
+            docId: 'goar/introduction/intro',
+            position: 'left',
+            label: 'Goar',
+          },
+          {
+            type: 'doc',
+            docId: 'arsyncer/introduction/intro',
+            position: 'left',
+            label: 'Arsyncer',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -94,7 +106,15 @@ const config = {
             items: [
               {
                 label: 'Arseeding',
-                to: '/docs/introduction/lightNode',
+                to: '/docs/arseeding/introduction/lightNode',
+              },
+              {
+                label: 'Goar',
+                to: '/docs/goar/introduction/intro',
+              },
+              {
+                label: 'Arsyncer',
+                to: '/docs/arsyncer/introduction/intro',
               },
             ],
           },

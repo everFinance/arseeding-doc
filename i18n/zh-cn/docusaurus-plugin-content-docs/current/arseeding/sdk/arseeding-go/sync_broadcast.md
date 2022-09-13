@@ -46,7 +46,7 @@ task := cli.GetBroadcastTask(arId) // 获取广播任务
 task = cli.GetSyncTask(arId) // 获取同步任务
 ```
 
-返回值： [task](./type.md#task)
+返回值： [task](type.md#task)
 
 ## 停止同步、广播任务
 

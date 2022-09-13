@@ -12,12 +12,12 @@ const FeatureList = [
     },
     {
         title: <Translate>Deploy</Translate>,
-        to: 'docs/deploy/intro',
+        to: 'docs/deploy/0.0.intro.md',
         src: require('../../../static/img/deploy.png').default,
     },
     {
         title: 'SDK',
-        to: 'docs/sdk/arseeding-go/intro',
+        to: 'docs/sdk/arseeding-go/0.0.intro.md',
         src: require('../../../static/img/sdk.png').default,
     },
 ];

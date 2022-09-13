@@ -3,36 +3,68 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Introduction": {
+  "sidebar.arseeding.category.Introduction": {
     "message": "Arseeding 介绍",
-    "description": "The label for category Introduction in sidebar tutorialSidebar"
+    "description": "The label for category Introduction in sidebar arseeding"
   },
-  "sidebar.tutorialSidebar.category.Guide": {
+  "sidebar.arseeding.category.Guide": {
     "message": "使用指南",
-    "description": "The label for category Guide in sidebar tutorialSidebar"
+    "description": "The label for category Guide in sidebar arseeding"
   },
-  "sidebar.tutorialSidebar.category.Deploy": {
+  "sidebar.arseeding.category.Deploy": {
     "message": "部署服务",
-    "description": "The label for category Deploy in sidebar tutorialSidebar"
+    "description": "The label for category Deploy in sidebar arseeding"
   },
-  "sidebar.tutorialSidebar.category.SDK": {
+  "sidebar.arseeding.category.SDK": {
     "message": "SDK",
-    "description": "The label for category SDK in sidebar tutorialSidebar"
+    "description": "The label for category SDK in sidebar arseeding"
   },
-  "sidebar.tutorialSidebar.category.arseeding-go": {
+  "sidebar.arseeding.category.arseeding-go": {
     "message": "arseeding-go",
-    "description": "The label for category arseeding-go in sidebar tutorialSidebar"
+    "description": "The label for category arseeding-go in sidebar arseeding"
   },
-  "sidebar.tutorialSidebar.category.arseeding-js": {
+  "sidebar.arseeding.category.arseeding-js": {
     "message": "arseeding-js",
-    "description": "The label for category arseeding-js in sidebar tutorialSidebar"
+    "description": "The label for category arseeding-js in sidebar arseeding"
   },
-  "sidebar.tutorialSidebar.category.API": {
+  "sidebar.arseeding.category.API": {
     "message": "API",
-    "description": "The label for category API in sidebar tutorialSidebar"
+    "description": "The label for category API in sidebar arseeding"
   },
-  "sidebar.tutorialSidebar.category.Other": {
+  "sidebar.arseeding.category.Other": {
     "message": "其他",
-    "description": "The label for category Other in sidebar tutorialSidebar"
+    "description": "The label for category Other in sidebar arseeding"
+  },
+  "sidebar.goar.category.Introduction": {
+    "message": "Goar 介绍",
+    "description": "The label for category Introduction in sidebar goar"
+  },
+  "sidebar.goar.category.Client": {
+    "message": "Client",
+    "description": "The label for category Client in sidebar goar"
+  },
+  "sidebar.goar.category.Wallet": {
+    "message": "Wallet",
+    "description": "The label for category Wallet in sidebar goar"
+  },
+  "sidebar.goar.category.BundleSigner": {
+    "message": "Bundle 签名",
+    "description": "The label for category BundleSigner in sidebar goar"
+  },
+  "sidebar.goar.category.Threshold": {
+    "message": "门限签名",
+    "description": "The label for category Threshold in sidebar goar"
+  },
+  "sidebar.goar.category.Utils": {
+    "message": "工具",
+    "description": "The label for category Utils in sidebar goar"
+  },
+  "sidebar.arsyncer.category.Introduction": {
+    "message": "Arsyncer 介绍",
+    "description": "The label for category Introduction in sidebar arsyncer"
+  },
+  "sidebar.arsyncer.category.Usage": {
+    "message": "如何使用",
+    "description": "The label for category Usage in sidebar arsyncer"
   }
 }

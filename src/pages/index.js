@@ -21,7 +21,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className={styles.btnName}
-            to="/docs/guide/quickStart">
+            to="/docs/Arseeding/guide/quickStart">
             <Translate>Quick Start</Translate>
           </Link>
         </div>

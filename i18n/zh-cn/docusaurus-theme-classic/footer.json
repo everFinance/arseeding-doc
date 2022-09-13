@@ -13,7 +13,7 @@
   },
   "link.item.label.Arseeding": {
     "message": "Arseeding",
-    "description": "The label of footer link with label=Arseeding linking to /docs/introduction/lightNode"
+    "description": "The label of footer link with label=Arseeding linking to /docs/arseeding/introduction/lightNode"
   },
   "link.item.label.Discord": {
     "message": "Discord",
@@ -26,5 +26,13 @@
   "link.item.label.GitHub": {
     "message": "GitHub",
     "description": "The label of footer link with label=GitHub linking to https://github.com/everFinance/arseeding"
+  },
+  "copyright": {
+    "message": "Copyright © 2022 everFinance, Inc. Built with Docusaurus.",
+    "description": "The footer copyright"
+  },
+  "link.item.label.Goar": {
+    "message": "Goar",
+    "description": "The label of footer link with label=Goar linking to /docs/goar/introduction/intro"
   }
 }

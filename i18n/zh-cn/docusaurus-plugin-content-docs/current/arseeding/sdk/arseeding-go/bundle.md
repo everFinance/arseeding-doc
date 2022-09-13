@@ -1,4 +1,4 @@
-如果还不知道怎么生成 Arseeding golang 请看上一节：[golang SDK 概览](./1.intro.md) 。
+如果还不知道怎么生成 Arseeding golang 请看上一节：[golang SDK 概览](1.intro.md) 。
 
 使用 Arseeding-go 可以帮助开发者快速将文件发送到 Arseeding 节点。
 
@@ -14,7 +14,7 @@ currency := "USDC" // everpay supported all tokens, like 'AR','ETH','USDT' and s
 order, err := sdk.SendData(data, currency, &schema.OptionItem{Tags: tags})
 ```
 
-返回值： [order](./type.md#order)
+返回值： [order](type.md#order)
 
 `data` 是需要上传的数据，通常是一个二进制数据。你可以通过 io 读取文件并完成上传。
 
@@ -32,7 +32,7 @@ order, err := sdk.SendData(data, currency, &schema.OptionItem{Tags: tags})
 everTx, err := sdk.PayOrder(order)
 ```
 
-返回值: [everTx](./type.md#ever_tx)
+返回值: [everTx](type.md#ever_tx)
 
 注意：若用户在 everpay 上面还没有资产，可以参考[这里](https://www.notion.so/cfa4e630400048d484ffc6b1abbdea05)进行资产跨链。支付必须在**60分钟**内完成，否则数据将不会被上传至 Arweave 并且 Arseeding 会将该笔数据清除。
 
@@ -75,7 +75,7 @@ cli := sdk.New(arseedUrl)
 resFee, err := cli.BundleFee(dataSize, currency)
 ```
 
-返回值：[resFee](./type.md#fee)
+返回值：[resFee](type.md#fee)
 
 ## 获取用户订单
 
@@ -89,5 +89,5 @@ resOrders, err := cli.GetOrders(addr)
 
 ```
 
-返回值：[resOrders](./type.md#user_order)
+返回值：[resOrders](type.md#user_order)
 
