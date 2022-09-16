@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="The Web3Infra tool has you developers covered. It's Easy-to-use, has high-performing Arweave light nodes and gateways.">
       <HomepageHeader />
       <main>
           <HomepageFeatures/>
