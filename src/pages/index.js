@@ -33,7 +33,7 @@ function HomepageHeader() {
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout title={`Hello from ${siteConfig.title}`} description="The Web3Infra xxxxx">
+    <Layout title={`Hello from ${siteConfig.title}`} description="The Web3Infra tool has you developers covered. It's Easy-to-use, has high-performing Arweave light nodes and gateways.">
       <HomepageHeader />
       <main>
           <HomepageFeatures/>
