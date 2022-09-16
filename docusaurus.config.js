@@ -162,11 +162,9 @@ const config = {
         {name:'twitter:description', content: 'The Web3Infra tool has you developers covered. It\'s Easy-to-use, has high-performing Arweave light nodes and gateways.'},
         {name: 'twitter:image', content: 'https://arseed.web3infra.dev/37V04B8otZHoNSIJ8QTiZp38fN1Uo60rNQ9bSI-GQWA'},
           //https://arseed.web3infra.dev/37V04B8otZHoNSIJ8QTiZp38fN1Uo60rNQ9bSI-GQWA
-        {property: 'og:description', content: 'The Web3Infra tool has you developers covered. It\'s Easy-to-use, has high-performing Arweave light nodes and gateways.'},
         {property: 'og:image', content: 'https://arseed.web3infra.dev/37V04B8otZHoNSIJ8QTiZp38fN1Uo60rNQ9bSI-GQWA'},
         {property: 'og:type', content: 'website'},
         {property: 'og:title', content: 'Web3Infra'},
-        {name:'description', content: 'The Web3Infra tool has you developers covered. It\'s Easy-to-use, has high-performing Arweave light nodes and gateways.'}
       ],
     }),
 };
