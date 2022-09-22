@@ -17,7 +17,6 @@ const path = 'Your Folder path'
 const priv = 'YOUR PRIVATE KEY'
 const arseedUrl = 'https://arseed.web3infra.dev'
 const payCurrency = 'USDC' // or ETH,BNB etc.
-const apiKey = 'your apiKey'
 
 uploadFolderAndPay(path,priv,url,payCurrency).catch((e)=>{
     console.log(e)
