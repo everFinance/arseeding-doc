@@ -19,8 +19,9 @@ const path = 'Your Folder path'
 const priv = 'YOUR PRIVATE KEY'
 const arseedUrl = 'https://arseed.web3infra.dev'
 const payCurrency = 'USDC' // or ETH,BNB etc.
+const indexFile = 'indexFileNameWithExtension'
 
-uploadFolderAndPay(path,priv,url,payCurrency).catch((e)=>{
+uploadFolderAndPay(path,priv,url,payCurrency,indexFile).catch((e)=>{
     console.log(e)
 }).then((res)=>{
     console.log(res.maniId)
@@ -37,6 +38,7 @@ Configuration Notes:
 - `payUrl` is the URL of the everPay service that needs to be configured: [https://api.everpay.io](https://api.everpay.io/)
 - `path` is the path to the folder you want to upload, for example, to deploy a static website, the front-end project will generate a build or dist folder after the project is compiled, just choose the path to that folder.
 - `payCurrency` is the payment token you need to choose, if your MetaMask address in everPay holds usdc, please fill in usdc here, if it holds other tokens, please fill in the symbol of other tokens.
+- `indexFile` is optional,if you don't pass it,`index.html`(if exist) or null will be default value, if the folder is a front-end project build folder you don't need pass indexFile.
 
 After preparing the configuration, call uploadFolderAndPay(path,priv,url,payCurrency) to upload all the files under your folder to web3infra's Arseeding node by means of manifest.
 

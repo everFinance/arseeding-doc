@@ -17,6 +17,7 @@ const path = 'Your Folder path'
 const priv = 'YOUR PRIVATE KEY'
 const arseedUrl = 'https://arseed.web3infra.dev'
 const payCurrency = 'USDC' // or ETH,BNB etc.
+const indexFile = 'indexFileNameWithExtension'
 
 uploadFolderAndPay(path,priv,url,payCurrency).catch((e)=>{
     console.log(e)
@@ -36,6 +37,7 @@ curl --location --request GET 'https://arseed.web3infra.dev/{res.maniId}'
 - `payUrl`是需要配置的 everPay 服务的 URL:[https://api.everpay.io](https://api.everpay.io/)
 - path 为你想要上传的文件夹的路径，例如，部署静态网站，前端项目编译后会生成 build 或 dist 文件夹，选择该文件夹的路径即可。
 - payCurrency 是需要选择的支付代币，如果你的 MetaMask 地址在 everPay 持有的是 usdc，这里请填写 usdc，如果持有的是其他代币，请填写其他代币的 symbol。
+- `indexFile` 是可选参数，你可以传入一个该文件夹下最重要的文件名（e.g main.txt)，如果你上传的是一个前端项目的 build 文件夹，则不需要传入此参数。
 
 在准备好配置后，调用 uploadFolderAndPay(path,priv,url,payCurrency) 就可以将你的文件夹下的所有文件通过 manifest 的方式上传到 web3infra 的 Arseeding 节点。
 
