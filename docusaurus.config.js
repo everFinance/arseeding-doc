@@ -149,7 +149,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} everFinance, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} everVision, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
