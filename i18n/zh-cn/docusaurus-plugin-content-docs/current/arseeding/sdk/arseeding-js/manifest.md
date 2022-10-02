@@ -1,7 +1,9 @@
 # Manifest
 manifest 旨在为用户提供文件夹上传并解析的功能，其中一个重要的应用场景便是静态网站的部署。现在，你可以通过 Arseeding 提供的 SDK 来上传你的静态网页文件夹，只需极低的花费（0.1-0.2 USDC）就可以将你的静态站点永久的部署到 Arweave 上。
 
-了解更多：[Manifest 介绍](../arseeding-go/manifest.md)
+了解更多：[Manifest 介绍](../../other/manifest.md)
+
+*下面将为大家介绍如何便捷的在 Arseeding 中使用 Manifest 功能。*
 ## 使用
 
 ### 安装 SDK

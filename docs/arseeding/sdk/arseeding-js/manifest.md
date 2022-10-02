@@ -2,7 +2,7 @@
 
 manifest is designed to provide users with the ability to upload and parse folders, and one of the key application cases is the deployment of static websites. Now you can upload your static web folders via the SDK and deploy your static site permanently to Arweave for a very low cost (0.1 - 0.2 USDC).
 
-More detail: [Introduction about manifest](../arseeding-go/manifest.md)
+More detail: [Introduction about manifest](../../other/manifest.md)
 
 # Installation
 
