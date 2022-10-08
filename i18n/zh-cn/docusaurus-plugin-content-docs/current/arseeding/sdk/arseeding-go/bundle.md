@@ -18,7 +18,9 @@ order, err := sdk.SendData(data, currency, &schema.OptionItem{Tags: tags})
 
 `data` 是需要上传的数据，通常是一个二进制数据。你可以通过 io 读取文件并完成上传。
 
-`tags` 是 Arweave 支持的一种 key-value 索引，你可以在 `tags` 中设置文件类型，设置文件名称甚至是版本号。关于 Arweave Tag：TODO。
+`tags` 是 Arweave 支持的一种 key-value 索引，你可以在 `tags` 中设置文件类型，设置文件名称甚至是版本号。关于 [Arweave Tag](../../other/tags.md)。
+
+`tags` 中的 `Content-Type` 需要基于你上传的内容进行配置，例如 上传的 png 格式的图片，则配置为 `image/png`，详细说明参考 [Content-Type](../../other/tags.md#content-type)。
 
 `currency` 选择你需要为文件存储支付的币种，如果使用个人部署的 No_Fee 模式节点，该值可以为空字符串。
 

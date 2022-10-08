@@ -49,6 +49,8 @@ const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops)
 
 `sendAndPay` will do both upload and payments, make sure your wallet has a sufficient amount of assets on everPay. If you’re using your own Arseeding node with No_Fee mode turned on, please use the "Upload data only" method for upload processing.
 
+`Content-Type` in tags needs to be configured based on the content you upload. For example, if you upload an image in png format, configure it as `image/png`. For details, refer to [Content-Type](../../other/tags.md#content-type).
+
 ### Upload data only
 
 ```jsx

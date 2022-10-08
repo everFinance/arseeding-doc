@@ -21,6 +21,8 @@ Return value: [order](type.md#order)
 
 `tags` is a key-value index supported by Arweave, you can set the file type, set the file name and even the version number in `tags`. About Arweave Tag: TODO.
 
+`Content-Type` in tags needs to be configured based on the content you upload. For example, if you upload an image in png format, configure it as `image/png`. For details, refer to [Content-Type](../../other/tags.md#content-type).
+
 `currency` selects the currency you need to pay for the file storage, the value can be an empty string if you use the No_Fee mode node for personal deployments.
 
 Note: This step sends the data to Arseeding for staging and returns a pending order to the user, which will be uploaded by Arseeding once the order is paid (you can then query the data via the Arseeding or Arweave gateways). **If the order is not paid within 1 hour, the order expires and the data is deleted.**

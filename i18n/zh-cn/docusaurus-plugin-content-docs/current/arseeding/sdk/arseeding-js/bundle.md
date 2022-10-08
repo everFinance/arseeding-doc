@@ -49,6 +49,8 @@ const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops)
 
 `sendAndPay` 会同时完成上传和支付两个动作，请确保你的钱包在 everPay Protocol 上有充足的资产。如果使用自有 Arseeding 节点并打开 No_Fee 模式，请使用“只上传数据”的方式进行上传处理。
 
+`tags` 中的 `Content-Type` 需要基于你上传的内容进行配置，例如 上传的 png 格式的图片，则配置为 `image/png`，详细说明参考 [Content-Type](../../other/tags.md#content-type)。
+
 ### 只上传数据
 
 ```jsx
