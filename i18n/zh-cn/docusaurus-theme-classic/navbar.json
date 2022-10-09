@@ -18,13 +18,5 @@
   "item.label.Arsyncer": {
     "message": "Arsyncer",
     "description": "Navbar item with label Arsyncer"
-  },
-  "item.label. ": {
-    "message": "Goar",
-    "description": "Navbar item with label  "
-  },
-  "item.label.  ": {
-    "message": "Arsyncer",
-    "description": "Navbar item with label   "
   }
 }

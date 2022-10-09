@@ -30,7 +30,7 @@ if err != nil {
 
 说明：
 
-- `keyFile` 是 Arweave 地址（或其他兼容 Arweave RSA 签名算法的公有链地址）对应的 keyFile 文件，如何生成 KeyFile，可以参考：[获取 keyfile](https://web3infra.dev/zh-cn/docs/other/getAR)。
+- `keyFile` 是 Arweave 地址（或其他兼容 Arweave RSA 签名算法的公有链地址）对应的 keyFile 文件，如何生成 KeyFile，可以参考：[获取 keyfile](https://web3infra.dev/zh-cn/docs/arseeding/other/getAR)。
 - `rsaSigner` 是 RSA 签名算法的地址对应的 signer 实例。
 - `rsaItemSigner` 是 RSA signer 创建的 itemSigner 实例。
 - `privKey` 是以太坊地址（或其他兼容以太坊 ECC 签名算法的公有链地址）对应的私钥。
@@ -69,4 +69,4 @@ fmt.Println(item)
 - `target` 是 bundleItem 的可选项，一般为空。
 - `anchor` 是 bundleItem 的可选项，一般为空。
 
-作为 Arweave 的一种标准格式 `[ANS-104 标准](https://github.com/ArweaveTeam/arweave-standards/blob/master/ans/ANS-104.md)` ，bundle item 可以被视为轻量级的 AR 交易，其更适用于数据体积小、数量多的应用场景。
+作为 Arweave 的一种标准格式 [ANS-104 标准](https://github.com/ArweaveTeam/arweave-standards/blob/master/ans/ANS-104.md) ，bundle item 可以被视为轻量级的 AR 交易，其更适用于数据体积小、数量多的应用场景。
