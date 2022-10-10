@@ -86,6 +86,12 @@ const config = {
             position: 'left',
             label: 'Arsyncer',
           },
+          {
+            type: 'doc',
+            docId: 'turing/introduction/intro',
+            position: 'left',
+            label: ' ',
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'localeDropdown',
@@ -115,6 +121,10 @@ const config = {
               {
                 label: 'Arsyncer',
                 to: '/docs/arsyncer/introduction/intro',
+              },
+              {
+                label: ' ',
+                to: '/docs/turing/introduction/intro',
               },
             ],
           },

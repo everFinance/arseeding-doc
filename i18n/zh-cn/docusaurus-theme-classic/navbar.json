@@ -18,5 +18,9 @@
   "item.label.Arsyncer": {
     "message": "Arsyncer",
     "description": "Navbar item with label Arsyncer"
+  },
+  "item.label. ": {
+    "message": "Turing",
+    "description": "Navbar item with label  "
   }
 }

@@ -66,5 +66,17 @@
   "sidebar.arsyncer.category.Usage": {
     "message": "如何使用",
     "description": "The label for category Usage in sidebar arsyncer"
+  },
+  "sidebar.turing.category.Introduction": {
+    "message": "Turing 介绍",
+    "description": "The label for category Introduction in sidebar turing"
+  },
+  "sidebar.turing.category.rollup": {
+    "message": "rollup",
+    "description": "The label for category rollup in sidebar turing"
+  },
+  "sidebar.turing.category.tracker": {
+    "message": "tracker",
+    "description": "The label for category tracker in sidebar turing"
   }
 }
