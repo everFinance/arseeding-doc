@@ -8,7 +8,8 @@ Turing 是 Arweave 生态下构建基于存储共识范式（SCP）App 的重要
 
 # 架构
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/26ac8848-a70b-4db0-80d4-65c9e815dd18/Untitled.png)
+<div align="center"><img src="https://arseed.web3infra.dev/Wi_ELzEWLDD2h6vt3WtWdor_6SS10bJHfOi7i4CytXc" height="70%" width="70%"/></div>
+
 
 Turing 的 架构如上图所示，下面对整个过程做一个简要介绍，具体实现可以进一步阅读 rollup 和 Tracker 两个部分。
 
