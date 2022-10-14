@@ -22,5 +22,9 @@
   "item.label. ": {
     "message": "Turing",
     "description": "Navbar item with label  "
+  },
+  "item.label.Turing": {
+    "message": "Turing",
+    "description": "Navbar item with label Turing"
   }
 }

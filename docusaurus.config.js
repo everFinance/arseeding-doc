@@ -90,7 +90,7 @@ const config = {
             type: 'doc',
             docId: 'turing/introduction/intro',
             position: 'left',
-            label: ' ',
+            label: 'Turing',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -123,7 +123,7 @@ const config = {
                 to: '/docs/arsyncer/introduction/intro',
               },
               {
-                label: ' ',
+                label: 'Turing',
                 to: '/docs/turing/introduction/intro',
               },
             ],

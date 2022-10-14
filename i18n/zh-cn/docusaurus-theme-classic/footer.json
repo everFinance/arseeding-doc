@@ -42,5 +42,9 @@
   "link.item.label. ": {
     "message": "Turing",
     "description": "The label of footer link with label=  linking to /docs/turing/introduction/intro"
+  },
+  "link.item.label.Turing": {
+    "message": "Turing",
+    "description": "The label of footer link with label=Turing linking to /docs/turing/introduction/intro"
   }
 }
