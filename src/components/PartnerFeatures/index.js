@@ -39,6 +39,14 @@ const PartnerList = [
             to: 'https://quest3.xyz/',
             src: require('../../../static/img/quest3.png').default,
         },
+        {
+            to: 'https://readon.me/#/',
+            src: require('../../../static/img/readOn.png').default,
+        },
+        {
+            to: 'https://0xecho.com/',
+            src: require('../../../static/img/echo.png').default,
+        },
     ],
     [
         // {
