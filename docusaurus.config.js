@@ -141,7 +141,7 @@ const config = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/FinanceEver',
+                href: 'https://twitter.com/everVisionHQ',
               },
             ],
           },
@@ -167,7 +167,7 @@ const config = {
       },
       metadata: [
         {name: 'twitter:card', content: 'summary'},
-        {name: 'twitter:site', content: '@financeEver'},
+        {name: 'twitter:site', content: '@everVisionHQ'},
         {name:'twitter:title', content: 'Web3Infra'},
         {name:'twitter:description', content: 'The Web3Infra tool has you developers covered. It\'s Easy-to-use, has high-performing Arweave light nodes and gateways.'},
         {name: 'twitter:image', content: 'https://arseed.web3infra.dev/37V04B8otZHoNSIJ8QTiZp38fN1Uo60rNQ9bSI-GQWA'},
