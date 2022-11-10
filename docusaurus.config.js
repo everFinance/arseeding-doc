@@ -143,6 +143,10 @@ const config = {
                 label: 'Twitter',
                 href: 'https://twitter.com/everVisionHQ',
               },
+              {
+                label: 'PermaDao',
+                href: 'https://permadao.com',
+              },
             ],
           },
           {
