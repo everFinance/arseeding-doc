@@ -144,6 +144,10 @@ const config = {
                 href: 'https://twitter.com/everVisionHQ',
               },
               {
+                label: 'Medium',
+                href: 'https://news.ever.vision',
+              },
+              {
                 label: 'PermaDAO',
                 href: 'https://permadao.com',
               },
