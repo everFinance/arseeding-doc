@@ -143,6 +143,7 @@ const config = {
                 label: 'Twitter',
                 href: 'https://twitter.com/everVisionHQ',
               },
+                // add
               {
                 label: 'Medium',
                 href: 'https://news.ever.vision',
