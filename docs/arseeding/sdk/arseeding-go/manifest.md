@@ -38,12 +38,12 @@ func main() {
 	currency := "USDC"
 	batch := 10
 	indexFile := "index.html"
-	uploader, maniId, err := sdk.NewSDK(arseedUrl, payUrl, signer)
+	uploader, err := sdk.NewSDK(arseedUrl, payUrl, signer)
 	if err != nil {
 		panic(err)
 	}
 	path := "./cmd"
-	ords, mnifId, err := uploader.UploadFolder(path,batch,indexFile,currency)
+	ords, maniId, err := uploader.UploadFolder(path,batch,indexFile,currency)
 	if err != nil {
 		panic(err)
 	}
