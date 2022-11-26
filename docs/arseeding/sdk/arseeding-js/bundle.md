@@ -59,6 +59,7 @@ import EthereumSigner from 'arseeding-arbundles/src/signing/chains/ethereumSigne
 import ArweaveSigner from "arseeding-arbundles/src/signing/chains/ArweaveSigner"
 import {readFileSync} from "fs"
 import path from "path"
+import {Config} from "../src/types";
 
 // use ecc signer
 const privateKey = '<your ecc private key>'
@@ -78,8 +79,13 @@ const ops = {
 }
 const arseedingUrl = '<https://arseed.web3infra.dev>'
 const currency = 'USDC' // everpay supported all tokens, like 'AR','ETH','USDT' and so on
-const order = await createAndSubmitItem(arseedingUrl, signer, data, ops, currency)
-
+const cfg: Config =  {
+    signer: signer,
+    path:"",
+    arseedUrl: arseedingUrl,
+    currency: currency
+}
+const order = await createAndSubmitItem( data, ops, cfg)
 // Example Return
 {
     itemId: 'XTnZ26gmangoxn7BBXXXabZhxf-BQgnI-x8p1xNUDdA',

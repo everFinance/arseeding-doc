@@ -56,29 +56,36 @@ const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops)
 ```jsx
 import { createAndSubmitItem } from 'arseeding-js'
 import EthereumSigner from 'arseeding-arbundles/src/signing/chains/ethereumSigner'
-import ArweaveSigner from 'arseeding-arbundles/src/signing/chains/ArweaveSigner'
-import { readFileSync } from 'fs'
-import path from 'path'
+import ArweaveSigner from "arseeding-arbundles/src/signing/chains/ArweaveSigner"
+import {readFileSync} from "fs"
+import path from "path"
+import {Config} from "../src/types";
 
 // use ecc signer
 const privateKey = '<your ecc private key>'
 const signer = new EthereumSigner(privateKey)
 // or use rsa signer
 const wallet = JSON.parse(
-    readFileSync(path.join(__dirname, '<your arweave keyfile>.json')).toString()
-)
+    readFileSync(path.join(__dirname, "<your arweave keyfile>.json")).toString(),
+);
 const signer = new ArweaveSigner(wallet)
 
 const data = '<need upload data, such as a picture>'
 const ops = {
     tags: [
         { name: 'key01', value: 'val01' },
-        { name: 'Content-Type', value: 'image/png' } // you should set the data type tag
+        { name: 'Content-Type', value: 'imag/png' } // you should set the data type tag
     ]
 }
 const arseedingUrl = '<https://arseed.web3infra.dev>'
 const currency = 'USDC' // everpay supported all tokens, like 'AR','ETH','USDT' and so on
-const order = await createAndSubmitItem(arseedingUrl, signer, data, ops, currency)
+const cfg: Config =  {
+    signer: signer,
+    path:"",
+    arseedUrl: arseedingUrl,
+    currency: currency
+}
+const order = await createAndSubmitItem( data, ops, cfg)
 
 // 返回示例
 {
