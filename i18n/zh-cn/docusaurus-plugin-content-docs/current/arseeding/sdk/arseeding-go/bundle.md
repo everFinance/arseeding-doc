@@ -11,7 +11,9 @@ tags := []types.Tag{
     {"aa", "aaa"},
 }
 currency := "USDC" // everpay supported all tokens, like 'AR','ETH','USDT' and so on
-order, err := sdk.SendData(data, currency, &schema.OptionItem{Tags: tags})
+apiKey := ""
+needSeq := false
+order, err := sdk.SendData(data, currency, apiKey, &schema.OptionItem{Tags: tags}, needSeq)
 ```
 
 返回值： [order](type.md#order)
@@ -23,6 +25,10 @@ order, err := sdk.SendData(data, currency, &schema.OptionItem{Tags: tags})
 `tags` 中的 `Content-Type` 需要基于你上传的内容进行配置，例如 上传的 png 格式的图片，则配置为 `image/png`，详细说明参考 [Content-Type](../../other/tags.md#content-type)。
 
 `currency` 选择你需要为文件存储支付的币种，如果使用个人部署的 No_Fee 模式节点，该值可以为空字符串。
+
+`apiKey` Arseeding 可以提供 [API Key](../../other/arseeding%20apiKey.md) 供用户直接上传数据而无需进行支付。
+
+`needSeq` Arseeding 支持顺序上链用户的订单，需要顺序上链则设置为 true 即可
 
 注意: 这一步操作是将数据发送至 Arseeding 进行暂存并返回给用户一个待支付的订单，订单支付完成后 Arseeding 会将数据上链,（之后你可以通过 Arseeding 或 Arweave 网关进行数据查询）。**若订单1小时内未支付则订单过期，数据删除。**
 
@@ -43,7 +49,7 @@ everTx, err := sdk.PayOrder(order)
 arseeding-go 同样提供将发送数据+支付整合到一起的便捷方法，以此来满足在 everpay 中已经拥有资产的用户。
 
 ```go
-everTx, itemId, err := sdk.SendDataAndPay(data, currency, &schema.OptionItem{Tags: tags}) // your account must have enough balance in everpay
+everTx, itemId, err := sdk.SendDataAndPay(data, currency, &schema.OptionItem{Tags: tags}, needSeq) // your account must have enough balance in everpay
 ```
 
 ## 用 API Key 发送原始数据

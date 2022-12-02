@@ -14,6 +14,10 @@ const ops = {
 }
 const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops)
 
+// 如果需要订单顺序上链可以配置 needSeq 参数为 true
+const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops, true)
+
+
 // 返回示例
 {
     status: 'ok',
@@ -101,6 +105,8 @@ const order = await createAndSubmitItem( data, ops, cfg)
 
 `createAndSubmitItem` 将进行数据上传。如果使用 web3infra 提供的 Arseeding 服务，需要对 Response 的订单进行支付，否则数据将在 60 分钟后清空。完成费用支付，web3infra 将 100% 保证该数据上传到 Arweave 网络。
 
+`cfg`: 如果需订单进行顺序上链可以配置 cfg 中的 needSeq 参数为 true，默认情况下为 false
+
 如果使用自有节点打开 No_Fee 模式，无需再进行额外的支付工作。
 
 ### 为 order 支付费用
@@ -141,7 +147,7 @@ const res = await submitByApikey(arseedingUrl, apikey, data, contentType, tags)
 
 ```
 
-如何申请 apiKey 请联系 everFinance Team。
+如何申请 apiKey 请联系 everVision Team。
 
 # Get Orders
 

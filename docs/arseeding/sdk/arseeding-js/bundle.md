@@ -14,6 +14,9 @@ const ops = {
 }
 const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops)
 
+// If you need upload orders by sequence, you can configure the needSeq parameter to true
+const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops, true)
+
 // Example Return
 {
     status: 'ok',
@@ -50,6 +53,8 @@ const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops)
 `sendAndPay` will do both upload and payments, make sure your wallet has a sufficient amount of assets on everPay. If you’re using your own Arseeding node with No_Fee mode turned on, please use the "Upload data only" method for upload processing.
 
 `Content-Type` in tags needs to be configured based on the content you upload. For example, if you upload an image in png format, configure it as `image/png`. For details, refer to [Content-Type](../../other/tags.md#content-type).
+
+`cfg`: 如果需订单进行顺序上链可以配置 cfg 中的 needSeq 参数为 true，默认情况下为 false
 
 ### Upload data only
 
@@ -140,7 +145,7 @@ const res = await submitByApikey(arseedingUrl,apikey,data,contentType, tags)
 
 ```
 
-To request an apiKey, please contact the everFinance Team.
+To request an apiKey, please contact the everVision Team.
 
 # Get Orders
 

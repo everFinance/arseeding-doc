@@ -12,7 +12,9 @@ tags := []types.Tag{
     {"aa", "aaa"},
 }
 currency := "USDC" // everpay supported all tokens, like 'AR','ETH','USDT' and so on
-order, err := sdk.SendData(data, currency, &schema.OptionItem{Tags: tags})
+apiKey := ""
+needSeq := false
+order, err := sdk.SendData(data, currency, apiKey, &schema.OptionItem{Tags: tags}, needSeq)
 ```
 
 Return value: [order](type.md#order)
@@ -24,6 +26,10 @@ Return value: [order](type.md#order)
 `Content-Type` in tags needs to be configured based on the content you upload. For example, if you upload an image in png format, configure it as `image/png`. For details, refer to [Content-Type](../../other/tags.md#content-type).
 
 `currency` selects the currency you need to pay for the file storage, the value can be an empty string if you use the No_Fee mode node for personal deployments.
+
+`apiKey` Arseeding provide [API Key](../../other/arseeding%20apiKey.md) so that Users upload data directly without payment.
+
+`needSeq` Arseeding supports sequential on-chain users' orders, if you need to on-chain in sequence, set it to true
 
 Note: This step sends the data to Arseeding for staging and returns a pending order to the user, which will be uploaded by Arseeding once the order is paid (you can then query the data via the Arseeding or Arweave gateways). **If the order is not paid within 1 hour, the order expires and the data is deleted.**
 
@@ -44,7 +50,7 @@ Note: If the user does not have assets on everpay yet, you can refer to [here](.
 arseeding-go also offers a convenient way to integrate sending data + payments to satisfy users who already have assets in everpay.
 
 ```go
-everTx, itemId, err := sdk.SendDataAndPay(data, currency, &schema.OptionItem{Tags: tags}) // your account must have enough balance in everpay
+everTx, itemId, err := sdk.SendDataAndPay(data, currency, &schema.OptionItem{Tags: tags}, needSeq) // your account must have enough balance in everpay
 ```
 
 ## Send raw data with API Key
