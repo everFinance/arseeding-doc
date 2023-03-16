@@ -13,7 +13,7 @@ Open your terminal under the demo project and install arseeding sdk, goether usi
 
 ```go
 go mod tidy
-go get github.com/everFinance/arseeding
+go get github.com/permadao/arseeding
 go get github.com/everFinance/goether
 ```
 
@@ -23,7 +23,7 @@ go get github.com/everFinance/goether
 ```go
 import (
 	"fmt"
-	"github.com/everFinance/arseeding/sdk"
+	"github.com/permadao/arseeding/sdk"
 	"github.com/everFinance/goether"
 )
 

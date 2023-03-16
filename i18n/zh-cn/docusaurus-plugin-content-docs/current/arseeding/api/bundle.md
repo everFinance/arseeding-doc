@@ -66,7 +66,7 @@
 
 ```
 
-注意：如果你想使用 apiKey 的方式在 web3infra 服务中上传数据，请联系 everFinance Team。
+注意：如果你想使用 apiKey 的方式在 web3infra 服务中上传数据，请联系 permadao Team。
 
 ### Get Bundle Fee
 

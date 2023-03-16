@@ -98,7 +98,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/everFinance/arseeding',
+            href: 'https://github.com/permadao/arseeding',
             label: 'GitHub',
             position: 'right',
           },
@@ -163,7 +163,7 @@ const config = {
               // },
               {
                 label: 'GitHub',
-                href: 'https://github.com/everFinance/arseeding',
+                href: 'https://github.com/permadao/arseeding',
               },
             ],
           },

@@ -145,7 +145,7 @@ const res = await submitByApikey(arseedingUrl,apikey,data,contentType, tags)
 
 ```
 
-To request an apiKey, please contact the everVision Team.
+To request an apiKey, please contact the permadao Team.
 
 # Get Orders
 

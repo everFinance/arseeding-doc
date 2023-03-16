@@ -66,7 +66,7 @@ Use X-API-KEY to submit data to Arseeding.
 
 ```
 
-Note: If you would like to upload data in the web3infra service using the apiKey method, please contact the everFinance Team.
+Note: If you would like to upload data in the web3infra service using the apiKey method, please contact the permadao Team.
 
 ### Get Bundle Fee
 

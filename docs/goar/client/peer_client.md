@@ -22,7 +22,7 @@ func main() {
 
 Note：
 
-- `arUrl` ： Arweave gateway or node address, all relevant information of Arweave network can be obtained by calling the interface of gateway or node. In this example, we fill in the public service address web3infra.dev maintained by everVison, because it maintains a set of high availability The peers can get a more efficient experience when acquiring and broadcasting transaction information through peers.
+- `arUrl` ： Arweave gateway or node address, all relevant information of Arweave network can be obtained by calling the interface of gateway or node. In this example, we fill in the public service address web3infra.dev maintained by permadao, because it maintains a set of high availability The peers can get a more efficient experience when acquiring and broadcasting transaction information through peers.
 - `cli`： Client instance, you can get various information of Arweave network by calling the method of this instance.
 - When we introduce the methods in client next, we have created an instance of cli by default.
 

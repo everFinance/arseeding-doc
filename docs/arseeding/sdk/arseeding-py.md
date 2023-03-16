@@ -53,7 +53,7 @@ Configuration Notes:：
     - ECC encryption system compatible with Ethereum。
 - `folder` : folder path need to upload。
 - `payUrl` is the URL of the everPay service that needs to be configured: [https://api.everpay.io](https://api.everpay.io/)(the default url if you ignore this parameter)
-- `arseedUrl` is the URL of the Arseeding backend service, here we use the public Arseeding service provided by everFinance: [https://arseed.web3infra.dev](https://arseed.web3infra.dev/).（the default url if you ignore this parameter）
+- `arseedUrl` is the URL of the Arseeding backend service, here we use the public Arseeding service provided by permadao: [https://arseed.web3infra.dev](https://arseed.web3infra.dev/).（the default url if you ignore this parameter）
 - `currency` is the payment token you need to choose, if your MetaMask address in everPay holds usdc, please fill in usdc here, if it holds other tokens, please fill in the symbol of other tokens.
 - `index_page` is the default index file for manifest. Static websites are usually index.html ( default value ).
 

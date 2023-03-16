@@ -36,7 +36,7 @@ curl --location --request GET 'https://arseed.web3infra.dev/{res.maniId}'
 Configuration Notes:
 
 - Populate your ECC key with `YOUR PRIVATE KEY`. Make sure that the wallet corresponding to the private key has assets in everPay.
-- `arseedUrl` is the URL of the Arseeding backend service, here we use the public Arseeding service provided by everFinance: [https://arseed.web3infra.dev](https://arseed.web3infra.dev/).
+- `arseedUrl` is the URL of the Arseeding backend service, here we use the public Arseeding service provided by permadao: [https://arseed.web3infra.dev](https://arseed.web3infra.dev/).
 - `payUrl` is the URL of the everPay service that needs to be configured: [https://api.everpay.io](https://api.everpay.io/)
 - `path` is the path to the folder you want to upload, for example, to deploy a static website, the front-end project will generate a build or dist folder after the project is compiled, just choose the path to that folder.
 - `payCurrency` is the payment token you need to choose, if your MetaMask address in everPay holds usdc, please fill in usdc here, if it holds other tokens, please fill in the symbol of other tokens.

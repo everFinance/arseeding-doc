@@ -18,7 +18,7 @@ manifest 旨在为用户提供文件夹上传并解析的功能，其中一个�
 
 ```go
 go mod tidy
-go get github.com/everFinance/arseeding
+go get github.com/permadao/arseeding
 go get github.com/everFinance/goether
 ```
 
@@ -29,7 +29,7 @@ go get github.com/everFinance/goether
 ```go
 import (
 	"fmt"
-	"github.com/everFinance/arseeding/sdk"
+	"github.com/permadao/arseeding/sdk"
 	"github.com/everFinance/goether"
 )
 
