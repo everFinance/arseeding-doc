@@ -24,7 +24,7 @@ func main() {
 
 说明：
 
-- `arUrl` ： Arweave 网关或者节点地址，通过调用网关或节点的接口就能获取到 Arweave 网络的所有相关信息，本例中我们填入的是 everFinance 维护的公共服务地址 web3infra.dev,因为其维护了一组高可用的 peers，在通过 peers 获取和广播交易信息时，可以获得更高效的体验。
+- `arUrl` ： Arweave 网关或者节点地址，通过调用网关或节点的接口就能获取到 Arweave 网络的所有相关信息，本例中我们填入的是 permadao 维护的公共服务地址 web3infra.dev,因为其维护了一组高可用的 peers，在通过 peers 获取和广播交易信息时，可以获得更高效的体验。
 - `设置代理`： 在网络情况不佳的时候可以设置 `NewClient` 第二个参数。
 - `cli`： 创建的 client 实例，通过调用该实例的方法可以获取到 Arweave 网络的各种信息。
 - 接下来介绍 client 中的方法时，我们默认已经创建了 cli 这个实例。

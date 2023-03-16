@@ -36,7 +36,7 @@ curl --location --request GET 'https://arseed.web3infra.dev/{res.maniId}'
 配置说明：
 
 - 将你的 ECC 密钥填充到`YOUR PRIVATE KEY`。确保 private key 对应的钱包在 everPay 拥有资产。
-- arseedUrl 是 Arseeding 后端服务地址，这里我们使用 everFinance 提供的 public  Arseeding 服务：https://arseed.web3infra.dev。
+- arseedUrl 是 Arseeding 后端服务地址，这里我们使用 permadao 提供的 public  Arseeding 服务：https://arseed.web3infra.dev。
 - `payUrl`是需要配置的 everPay 服务的 URL:[https://api.everpay.io](https://api.everpay.io/)
 - path 为你想要上传的文件夹的路径，例如，部署静态网站，前端项目编译后会生成 build 或 dist 文件夹，选择该文件夹的路径即可。
 - payCurrency 是需要选择的支付代币，如果你的 MetaMask 地址在 everPay 持有的是 usdc，这里请填写 usdc，如果持有的是其他代币，请填写其他代币的 symbol。

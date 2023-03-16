@@ -53,7 +53,7 @@ maniId, fee1, fee2 = arseeding.upload_folder_and_pay(signer, currency, folder, i
     - 以太坊 网络兼容的 ECC 加密体系。
 - `folder` 是需要上传的文件夹路径。
 - `payUrl`是需要配置的 everPay 服务的 URL，可以不传入此参数，默认情况下 URL 为[https://api.everpay.io](https://api.everpay.io/)
-- `arseedUrl` 是 Arseeding 后端服务地址，这里我们使用 everFinance 提供的 public  Arseeding 服务：https://arseed.web3infra.dev。（该 url 也是此参数的默认值）
+- `arseedUrl` 是 Arseeding 后端服务地址，这里我们使用 permadao 提供的 public  Arseeding 服务：https://arseed.web3infra.dev。（该 url 也是此参数的默认值）
 - `currency` 是需要选择的支付代币，如果你的 MetaMask 地址在 everPay 持有的是 usdc，这里请填写 usdc，如果持有的是其他代币，请填写其他代币的 symbol。
 - `index_page`为 manifest 默认的索引文件。静态网站一般为 index.html（不传入时的默认值）。
 
