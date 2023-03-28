@@ -53,7 +53,7 @@
 **Request**
 
 - Method: **POST**
-- URL: `/bundle/data`
+- URL: `/bundle/data/:currency`
 - Header: X-API-KEY: 'your apiKey'
 - Body: --data-binary 'data'
 
