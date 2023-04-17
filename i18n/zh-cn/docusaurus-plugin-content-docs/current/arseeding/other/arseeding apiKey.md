@@ -2,7 +2,7 @@
 
 ## 什么是 Arseeding
 
-Arseeding 支持 Bundle（ANS-104）类型的交易。与 Arweave 原生交易相比，Bundle 交易更适合大量小文件存储的场景。在使用 Bundle 交易存储数据时，Arseeding 支持使用 everPay 进行存储费用支付，这意味着你不必持有 AR 代币也能使用 Arweave 的文件存储服务。同时，Arseeding 可以 100% 保证将文件上传到 Arweave 节点，提高开发人员的存储体验。
+Arseeding 支持 Bundle（ANS-104）类型的交易。与 [Arweave](https://www.arweave.org/) 原生交易相比，Bundle 交易更适合大量小文件存储的场景。在使用 Bundle 交易存储数据时，Arseeding 支持使用 [everPay](https://everpay.io/) 进行存储费用支付，这意味着你不必持有 AR 代币也能使用 Arweave 的文件存储服务。同时，Arseeding 可以 100% 保证将文件上传到 Arweave 节点，提高开发人员的存储体验。
 
 ## 为什么我们需要 Apikey
 
@@ -47,7 +47,7 @@ console.log({ res });
 
 ```
 
-上面的 **submitByApikey** 方法将我们的数据上传到 Arseeding，并由 Arseeding 签名后存储到 Arweave 中。有时我们希望使用自己的钱包签名上传的数据以确权，这时候我们可以使用 **createAndSubmitItem** 方法：
+上面的 **`submitByApikey`** 方法将我们的数据上传到 Arseeding，并由 Arseeding 签名后存储到 Arweave 中。有时我们希望使用自己的钱包签名上传的数据以确权，这时候我们可以使用 **`createAndSubmitItem`** 方法：
 
 ```ts
 
