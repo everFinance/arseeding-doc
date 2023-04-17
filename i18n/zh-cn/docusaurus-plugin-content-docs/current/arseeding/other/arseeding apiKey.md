@@ -15,7 +15,7 @@ Arseeding 支持 Bundle（ANS-104）类型的交易。与 [Arweave](https://www.
 
 Arseeding Apikey 与钱包地址绑定。访问 [Apikey 前端](https://apikey.web3infra.dev/) 使用  EVM 兼容的钱包登录网页，使用 everpay 支持的代币充值可以得到一个预付费的 apikey（首次充值会为新钱包自动生成一个 apikey），稍后我们可以使用这个 apikey 调用 Arseeding 相关接口将数据永久保存到 Arweave 网络！
 
-![apikeyPage](../../../../../../static/img/apikey.png)
+<div align="center"> <img src="https://arseed.web3infra.dev/NkX1YwNumzNETorHTuKvwGs7JrQZU_QfHPMLZ-QG46g" height="60%" width="60%" /> </div>
 
 Apikey 像密码一样重要！拥有 apikey 的人可以任意使用 apikey 中的余额，因此 apikey 不能随意泄露。
 

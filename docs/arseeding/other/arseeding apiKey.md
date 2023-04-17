@@ -14,7 +14,7 @@ This tutorial will introduce how to use apikey to upload data to Arweave and pay
 
 Arseeding Apikey is bound to a wallet address. Visit the [Apikey front-end](https://apikey.web3infra.dev/) and log in with an EVM-compatible wallet. Recharge with tokens supported by everpay to get a pre-paid apikey (a new apikey will be generated for a new wallet on the first recharge), and later we can use this apikey to call Arseeding-related APIs to permanently save data to the Arweave network!
 
-![apikeyPage](../../../static/img/apikey.png)
+<div align="center"> <img src="https://arseed.web3infra.dev/2r4ifNQTSofa7ihyQpUc4Iq9tiV7V4i7QsjLCFRBHZo" height="60%" width="60%" /> </div>
 
 ### Using Apikey to Deduct Storage Fees
 
