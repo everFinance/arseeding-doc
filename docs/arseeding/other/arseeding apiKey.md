@@ -14,7 +14,7 @@ This tutorial will introduce how to use apikey to upload data to Arweave and pay
 
 Arseeding Apikey is bound to a wallet address. Visit the [Apikey front-end](https://apikey.web3infra.dev/) and log in with an EVM-compatible wallet. Recharge with tokens supported by everpay to get a pre-paid apikey (a new apikey will be generated for a new wallet on the first recharge), and later we can use this apikey to call Arseeding-related APIs to permanently save data to the Arweave network!
 
-![apikeyPage](../../../static/img/apikey.png)
+![apikeyPage](../../../../../../static/img/apikey.png)
 
 ### Using Apikey to Deduct Storage Fees
 
@@ -46,60 +46,8 @@ console.log({ res });
 
 The above **submitByApikey** method uploads our data to Arseeding and is signed by Arseeding before being stored on Arweave. Sometimes, we want to use our own wallet to sign the uploaded data for authentication. In this case, we can use the **createAndSubmitItem** method:
 
+
 ```ts
 
-const arseedingUrl = "https://arseed.web3infra.dev";
-const apikey = process.env.APIKEY;
-const secret = process.env.SECRET;
-
-const data = "some data here....";
-const tags = [
-  {
-    name: "a",
-    value: "aaaa",
-  },
-  {
-    name: "b",
-    value: "bbb",
-  },
-  {
-    name: "Content-Type",
-    value: "text/html; charset=utf-8",
-  },
-];
-
-const wallet = Wallet.fromMnemonic(secret!);
-
-const eccSigner = new ArseedingArBundles.signers.EthereumSigner(
-  wallet.privateKey.substring(2)
-);
-
-const res = await Arseeding.createAndSubmitItem(
-  Buffer.from(data),
-  { tags },
-  {
-    apiKey: apikey,
-    currency: "USDC",
-    arseedUrl: arseedingUrl,
-    signer: eccSigner,
-    path: "",
-  }
-);
-
-console.log({ res });
-// {
-//   res: {
-//     itemId: "TTQ-UsWo6Tj8e6m-WldrSmBmnirs9RmIs0jFMDW50Yw",
-//     size: 221,
-//     bundler: "uDA8ZblC-lyEFfsYXKewpwaX-kkNDDw8az3IW9bDL68",
-//     currency: "USDC",
-//     decimals: 6,
-//     fee: "1805",
-//     paymentExpiredTime: 0,
-//     expectedBlock: 1159234,
-//   },
-// };
 
 ```
-
-The complete code can be found in [this repository](https://github.com/ethever/arseeding-apikey-demo).
