@@ -5,47 +5,32 @@
 ```jsx
 const arseedUrl = '<https://arseed.web3infra.dev>'
 const data = Buffer.from('need upload data ...')
-const payCurrency = 'USDC' // everpay supported all tokens,like 'AR','ETH','USDT' and so on
-const ops = {
+const tag = '<chaintype-symbol-id>' // everpay supported all token tag (chainType-symbol-id)
+const options = {
     tags: [
         {name: "Content-Type",value:"data type"},
         {name: "aa",value:"aaa"}
     ]
 }
-const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops)
+ const resp = await instance.sendAndPay(arseedUrl, data, tag, options)
 
 // If you need upload orders by sequence, you can configure the needSeq parameter to true
-const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops, true)
+const resp = await instance.sendAndPay(arseedUrl, data, tag, options, true)
 
 // Example Return
 {
-    status: 'ok',
-    everpayTx: {
-        tokenSymbol: 'VRT',
-        action: 'transfer',
-        from: '0x4002ED1a1410aF1b4930cF6c479ae373dEbD6223',
-        to: 'iSueFPkz-UIXQCclZj8eaYaVM-oUwmV5CzzCUiIZfL4',
-        amount: '3092857502178420',
-        fee: '0',
-        feeRecipient: '0x6451eB7f668de69Fb4C943Db72bCF2A73DeeC6B1',
-        nonce: '1658389952428',
-        tokenID: 'usjm4PCxUd5mtaon7zc97-dt-3qf67yPyqgzLnLqk5A',
-        chainType: 'arweave',
-        chainID: '0',
-        data: '{"itemId":"pDwp5zAvpsOklGTUDB1AOqT9t4z8nnksHCTdzqeS1Sg","bundler":"iSueFPkz-UIXQCclZj8eaYaVM-oUwmV5CzzCUiIZfL4","currency":"VRT","decimals":18,"fee":"3092857502178420","paymentExpiredTime":1658393551,"expectedBlock":978980}',
-        version: 'v1',
-        sig: '0x5fd4ad8de747eef0f70e5f9ba20b024b061a587fc51526399f94711f6bf9ff7012cd743b2b23e1b9e6aad721006578539628be9e4456954917efe09eee2780d91b'
-},
-    everHash: '0xf9396e34d75ea7c34033f188e7e1632f538af8601d4dd5c5b46e0f113deb6d30',
-    order: {
-        itemId: 'pDwp5zAvpsOklGTUDB1AOqT9t4z8nnksHCTdzqeS1Sg',
-        bundler: 'iSueFPkz-UIXQCclZj8eaYaVM-oUwmV5CzzCUiIZfL4',
-        currency: 'VRT',
-        decimals: 18,
-        fee: '3092857502178420',
-        paymentExpiredTime: 1658393551,
-        expectedBlock: 978980
-    }
+  everHash: '0xf88033873d3bfc525d9333ec51b60f3f3dc03f822a9a73f66a10ebbd944b29c6',
+  order: {
+    itemId: '2bpKpp0dtfFZE82-P0lOmeI5x4m2ynatFzdjBmCWd4k',
+    size: 192,
+    bundler: 'uDA8ZblC-lyEFfsYXKewpwaX-kkNDDw8az3IW9bDL68',
+    currency: 'USDC',
+    decimals: 6,
+    fee: '1141',
+    paymentExpiredTime: 1690702235,
+    expectedBlock: 1210331,
+    tag: 'ethereum-usdc-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'
+  }
 }
 
 ```
@@ -54,14 +39,12 @@ const resp = await instance.sendAndPay(arseedUrl, data, payCurrency, ops, true)
 
 `Content-Type` in tags needs to be configured based on the content you upload. For example, if you upload an image in png format, configure it as `image/png`. For details, refer to [Content-Type](../../other/tags.md#content-type).
 
-`cfg`: 如果需订单进行顺序上链可以配置 cfg 中的 needSeq 参数为 true，默认情况下为 false
+`tag` consists of `chainType`, `symbol`, `id` via `'-'`. All `tags` for the specified `currency` can be obtained via the [getTokenTagByEver](bundle.md#get-token-tag) method for payment of storage fees.
 
 ### Upload data only
 
 ```jsx
-import { createAndSubmitItem } from 'arseeding-js'
-import EthereumSigner from 'arseeding-arbundles/src/signing/chains/ethereumSigner'
-import ArweaveSigner from "arseeding-arbundles/src/signing/chains/ArweaveSigner"
+import { createAndSubmitItem, EthereumSigner, ArweaveSigner } from 'arseeding-js'
 import {readFileSync} from "fs"
 import path from "path"
 import {Config} from "../src/types";
@@ -76,41 +59,52 @@ const wallet = JSON.parse(
 const signer = new ArweaveSigner(wallet)
 
 const data = '<need upload data, such as a picture>'
-const ops = {
+const options = {
     tags: [
         { name: 'key01', value: 'val01' },
-        { name: 'Content-Type', value: 'imag/png' } // you should set the data type tag
+        { name: 'Content-Type', value: 'data type' } // you should set the data type tag
     ]
 }
 const arseedingUrl = '<https://arseed.web3infra.dev>'
-const currency = 'USDC' // everpay supported all tokens, like 'AR','ETH','USDT' and so on
-const cfg: Config =  {
+const tag = '<chaintype-symbol-id>' // everpay supported all token tag (chainType-symbol-id)
+const config: Config =  {
     signer: signer,
     path:"",
     arseedUrl: arseedingUrl,
-    currency: currency
+    tag: tag
 }
-const order = await createAndSubmitItem( data, ops, cfg)
+const order = await createAndSubmitItem( data, ops, config)
+
 // Example Return
 {
-    itemId: 'XTnZ26gmangoxn7BBXXXabZhxf-BQgnI-x8p1xNUDdA',
-    bundler: 'uDA8ZblC-lyEFfsYXKewpwaX-kkNDDw8az3IW9bDL68',
-    currency: 'VRT',
-    decimals: 18,
-    fee: '3088600376948271',
-    paymentExpiredTime: 1658394103,
-    expectedBlock: 978983
+  itemId: 'VoPNz4JVdWw5hDUfzmYlBWDm9ZLt7otBZ8yJbWTAG1E',
+  size: 201,
+  bundler: 'uDA8ZblC-lyEFfsYXKewpwaX-kkNDDw8az3IW9bDL68',
+  currency: 'USDC',
+  decimals: 6,
+  fee: '1244',
+  paymentExpiredTime: 1690970459,
+  expectedBlock: 1212405,
+  tag: 'ethereum-usdc-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'
 }
 ```
 
-`createAndSubmitItem` will upload data. If you use the Arseeding service provided by web3infra, you need to pay for the response order, otherwise the data will clear after 60 minutes. Once the payment is made, web3infra will 100% guarantee the upload of this data to the Arweave network.
+`createAndSubmitItem`: will upload data. If you use the Arseeding service provided by web3infra, you need to pay for the response order, otherwise the data will clear after 60 minutes. Once the payment is made, web3infra will 100% guarantee the upload of this data to the Arweave network.
+
+`tag` consists of `chainType`, `symbol`, `id` via `'-'`. All `tags` for the specified `currency` can be obtained via the [getTokenTagByEver](bundle.md#get-token-tag) method for payment of storage fees.
+
+`config`: If you want the order to be sequentially wound you can configure the needSeq parameter in the config to be true, the default is false.
 
 If you turn on No_Fee mode using your own node, no additional payment work is required.
 
 ### Pay for order
 
 ```jsx
-import { newEverpayByEcc, newEverpayByRSA, payOrder } from 'arseeding-js'
+import {
+  newEverpayByEcc,
+  newEverpayByRSA,
+  payOrder
+} from 'arseeding-js/cjs/payOrder'
 
 // use ecc wallet
 const eccPrivate = '<your ecc private key>'
@@ -124,6 +118,8 @@ const pay = newEverpayByRSA(arJWK, arAddress)
 const everHash = await payOrder(pay, order)
 ```
 
+`order` is the data structure of the order to be paid returned by [`createAndSubmitItem`](./bundle.md#upload-data-only). If this order is forgotten, it can be found by using the [`getOrders`](. /bundle.md#get-orders) function to find the corresponding order.
+
 `payOrder` will complete a payment for an uploaded order. This feature provides the ability to pay on behalf of a service provider who can store payments for a specified user.
 
 # Submit Data By ApiKey
@@ -131,18 +127,25 @@ const everHash = await payOrder(pay, order)
 ### Use apiKey to upload raw data directly
 
 ```jsx
-import { submitByApikey } from 'arseeding-js'
+import { submitByApikey, getTokenTagByEver } from 'arseeding-js'
 const arseedingUrl = '<https://arseed.web3infra.dev>'
 const apikey = '<your arseeding apiKey>'
-const data = '<need upload data, such as a picture>'
-const contentType = 'image/png'
-const tags = {'a':'aa','b':'bb'}
-const res = await submitByApikey(arseedingUrl,apikey,data,contentType, tags)
+const tag = '<chaintype-symbol-id>' // everpay supported all token tag (chainType-symbol-id)
+const data = Buffer.from('<need upload data, such as a picture>')
+const contentType = 'data type'
+const tags = { a: 'aa', b: 'bb' }
+const res = await submitByApikey(
+  arseedingUrl,
+  apikey,
+  tag,
+  data,
+  contentType,
+  tags
+)
 // Example Return
 {
-    itemId: "tSB2-PS3Qr-POmBgjIoi4wRYhhGq3UZ9uPO8dUf2LhM"
+  itemId: 'tSB2-PS3Qr-POmBgjIoi4wRYhhGq3UZ9uPO8dUf2LhM'
 }
-
 ```
 
 To request an apiKey, please contact the permadao Team.
@@ -154,27 +157,30 @@ To request an apiKey, please contact the permadao Team.
 ```jsx
 import { getOrders } from 'arseeding-js'
 const arseedingUrl = '<https://arseed.web3infra.dev>'
-const address = '<your address>'
+const address = '<your account address>'
 const res = await getOrders(arseedingUrl,itemId)
 
 // Example Return
 [
     {
-        "id": 13,
-        "createdAt": "2022-07-11T04:07:12.261Z",
-        "updatedAt": "2022-07-11T05:07:44.369Z",
-        "itemId": "n6Xv8LwdpsQgpaTQgaXQfUORW-KxYePDnj-1ka9dHxM",
-        "signer": "0x4002ED1a1410aF1b4930cF6c479ae373dEbD6223",
-        "signType": 3,
-        "size": 7802,
-        "currency": "USDT",
-        "decimals": 6,
-        "fee": "817",
-        "paymentExpiredTime": 1657516032,
-        "expectedBlock": 972166,
-        "paymentStatus": "paid",
-        "paymentId": "",
-        "onChainStatus": "success"
+      id: 1121936,
+      createdAt: '2023-07-04T10:29:31.313Z',
+      updatedAt: '2023-07-04T10:29:31.313Z',
+      itemId: 'b9qf5fCDY0dB-nF3ixPqL6pHVPFLiDvNYBm_MOi4yq4',
+      signer: '0x26361130d5d6E798E9319114643AF8c868412859',
+      bundler: 'uDA8ZblC-lyEFfsYXKewpwaX-kkNDDw8az3IW9bDL68',
+      signType: 3,
+      size: 203,
+      currency: 'USDC',
+      decimals: 6,
+      fee: '1247',
+      paymentExpiredTime: 1691058571,
+      expectedBlock: 1213090,
+      paymentStatus: 'unpaid',
+      paymentId: '',
+      onChainStatus: 'waiting',
+      sort: false,
+      kafka: false
     },
     ...
 ]
@@ -182,6 +188,10 @@ const res = await getOrders(arseedingUrl,itemId)
 ```
 
 This interface allows you to get all data upload orders for a certain address. The service provider can subscribe to the upload orders for the user's address and perform the payment service on behalf of the user.
+
+:::danger
+The payment order does not contain a `tag` field, the user or service provider can include the tag via [`getTokenTagByEver(currrency)`](. /bundle.md) to include the tag. and pay for its storage via `payOrder`.
+:::
 
 # Get Item Meta
 
@@ -195,19 +205,18 @@ const res = await getItemMeta(arseedingUrl,itemId)
 
 // Example Return
 {
-    "signatureType": 1,
-    "signature": "D0G5Sm-UWdNyxy-jmFKx7yYF0s0QxtO2THJtZ_duFntdmgfT15aHTU9H2-DENoZ-SdYvgFwH1_1fpTWtxQ6EhWrvSdPV6O--hOFAqdTAF-dH9-Krk_MyCf0YOhaV6JrUDam1j9cKcZGH7Ra-mmo3jdZKUtf9OxPjeZMl5DZCY_N9G9gEnI6nQ2VTVhcb8Yrjo3kalARFhwMU-MOw_vHtVQSv7gfSvabWqUQ5WrsJ7ULPqoY63bKQJ9BjRoq0E1B36upmwHkGRyJ7smLay0YJeRb8DXNUkQJm0Gm9TkQ632m4muWEwdDGpelji9CkqIFQWTLZ7iHPzgMSJivkstPLhDHd5wrK5osPImdGODf8bPmgKwZrWDmxxTByVk8AhOchNuoArEXnAUcaoDGnBWPE6KdHUPPSYoF1elm3kWRmZ-GMgtKEPp9AAPtFQ7ANk-nBQd88QvPsNpipgqIBG6VMMBFxP1GWn2jrlBxY5UIb_8Pc6dCN_t9EoUTsApe5XYsx_S2dCou3WNmEx2GvPfcrdQQmqSrxbmFNaE6-V-7N1oe3AAfd0SJgRKheKmC0vIrzaChQUFEiZb0yutWEUi0au8gAi8LzsmtkFKbGlgf3_w0F_p_x53Ay_qQvrghvC3dkfahmIV9JxaiYPXC0d9kNqBEBGZU0gUw4yL787TRrObo",
-    "owner": "rHaWu2SNSRRgl1AFINnNQFeSgjI4ywjsq4Y7Lt3vQ2Fv0qGY5uWIO23hcjavGM1uOjhUwKCok4JfeDwwGqvBvYDWaFFXdeniV1_zrhEmT_jvtAE5tY_hhvHB4Pw6wKXFzAOZMtx5jdbkqvG-UHil-mlkzsKtg6-q187lNRJy08dDtZBIKMJIjPScVUPXBwGW1Vww95Xe05uhWtWpv3SLfqkCE1RlLi9oXoAXtEi0GoPgQK4-wF6zDalyyHZS8mnsvaurCBQfgf795MzJG98K2EnTxYdXrnaWpCpCtEMpdOTrUXFh9wQZMpKaKGYnyIukpkDpSEXBr9faglBdO1pnAiJLXdoocMyPvfZxVeyPbb5YJYxrbc4_w4DW3OlE6Y-dCdBtN_qfhpU33CZ-034MQKYZ89wOrBHRST8STueYaWVvCQzKfJLLZfpdNkfeTCO3unhg6PTzW0sI56R4vEjoio2KxtPyQ3_tC1rTIYlEdA-GnCC4xpODpxYmgvVhD2oQP44QeUXVvkjaWTLBVc-NH3708OcZ8L03aadmn693AlhRP2_i_fns6KU7dmEUc0xfvkYwjvTV4Br4fJ7HZtpvFS8KWTRub_qB25S9ef1lhe0qTA_bb_YSog86G_Ndopl3vQv-xjHWlVSXAX3zBRapNwO3eDRvLlzR2DGMeTb2p3c",
-    "target": "",
-    "anchor": "",
-    "tags": [
-    {
-        "name": "Content-Type",
-        "value": "application/x.arweave-manifest+json"
-    }
-],
-    "data": "",
-    "id": "l5WNC__ih6YZLO3WGyUb7L0hcl_vIdTEw3eWOOnnX2Y"
+  signatureType: 3,
+  signature: 'AicM-UAHqrZTAtngxLPpe_F8rHiivKYkFCYI784P4Dsg0e2WCfP67vtRLlvzX7bniH6GtH1IgBdhaoE3qdo8DBs',
+  owner: 'BAztruEItSG5MwXkcTsOGURHq_3YU52AgPK1uoZGdjsMfqlVhPBASHs6A7AMeHEU3z6bBO-p3mTjCDKp7nl2cPM',
+  target: '',
+  anchor: '',
+  tags: [
+    { name: 'Content-Type', value: 'text/plain' },
+    { name: 'aa', value: 'aaa' }
+  ],
+  data: '',
+  id: 'ZpX2EUJjvXdQYtDpSEopKeqF8mFJrwjEoBTDHg16QiI',
+  tagsBy: 'BBhDb250ZW50LVR5cGUUdGV4dC9wbGFpbgRhYQZhYWEA'
 }
 
 ```
@@ -215,6 +224,7 @@ const res = await getItemMeta(arseedingUrl,itemId)
 # Get Bundle Fee
 
 ### Query bundle item storage costs
+
 ```js
 import { getBundleFee } from 'arseeding-js'
 const arseedingUrl = '<https://arseed.web3infra.dev>'
@@ -228,4 +238,21 @@ const res = await getBundleFee(arseedingUrl, size, currency)
     "decimals": 6,
     "finalFee": "3503"
 }
+```
+
+# Get Token Tag
+
+### Get tag by currency
+
+`tag` consists of `chainType`,`symbol`,`id`, and is a unique identifier for the `token` used to pay the storage fee.
+
+```js
+import { getTokenTagByEver } from 'arseeding-js'
+
+const currency = '<payment token symbol, such as eth, usdc. >'
+const tokenTags = await getTokenTagByEver(currency) //
+[
+  'ethereum-usdc-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+  // ...
+]
 ```
