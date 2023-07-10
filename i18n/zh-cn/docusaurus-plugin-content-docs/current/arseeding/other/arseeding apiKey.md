@@ -21,7 +21,7 @@ Apikey 像密码一样重要！拥有 apikey 的人可以任意使用 apikey 中
 
 ### 使用 Apikey 抵扣存储费用
 
-下面以 [arseedingjs sdk](../sdk/arseeding-js/bundle.md) 为例子展示如何使用 apikey 将数据存储到 Arweave。
+下面以 [arseedingjs sdk](../sdk/arseeding-js/1.intro.md) 为例子展示如何使用 apikey 将数据存储到 Arweave。
 
 ```ts
 
@@ -30,11 +30,12 @@ const apikey = process.env.APIKEY;
 const data = "some data here....";
 const contentType = "text/html; charset=utf-8";
 const tags = { a: "aa", b: "bb" };
+const tag = "chaintype-symbol-id...."
 
 const res = await submitByApikey(
   arseedingUrl,
   apikey!,
-  "USDC",
+  tag,
   Buffer.from(data),
   contentType,
   tags

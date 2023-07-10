@@ -18,7 +18,7 @@ Arseeding Apikey is bound to a wallet address. Visit the [Apikey front-end](htt
 
 ### Using Apikey to Deduct Storage Fees
 
-The example below uses the [arseedingjs sdk](../sdk/arseeding-js/bundle.md) to demonstrate how to use apikey to store data on Arweave.
+The example below uses the [arseedingjs sdk](../sdk/arseeding-js/1.intro.md) to demonstrate how to use apikey to store data on Arweave.
 
 ```ts
 
