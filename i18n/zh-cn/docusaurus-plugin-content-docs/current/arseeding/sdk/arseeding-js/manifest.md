@@ -22,10 +22,10 @@ const arseedUrl = 'https://arseed.web3infra.dev'
 const tag = '<chaintype-symbol-id>' // everPay 支持的 token tag (chainType-symbol-id)
 const indexFile = ''
 
-uploadFolderAndPay(path,priv,url,tag, indexFile).catch((e)=>{
+uploadFolderAndPay(path,priv,url,tag, indexFile).then((res)=>{
+  console.log(res)
+}).catch((e)=>{
     console.log(e)
-}).then((res)=>{
-    console.log(res.maniId)
 })
 
 // review manifest Data
