@@ -16,17 +16,16 @@ npm i arseeding-js
 ```jsx
 import {uploadFolderAndPay} from "arseeding-js/cjs/uploadFolder";
 
-const path = 'Your Folder path'
-const priv = 'YOUR PRIVATE KEY'
-const arseedUrl = 'https://arseed.web3infra.dev'
-const tag = '<chaintype-symbol-id>' // everPay 支持的 token tag (chainType-symbol-id)
-const indexFile = ''
+const run = async () => {
+  const path = 'Your Folder path'
+  const priv = 'YOUR PRIVATE KEY'
+  const arseedUrl = 'https://arseed.web3infra.dev'
+  const tag = '<chaintype-symbol-id>' // everPay 支持的 token tag (chainType-symbol-id)
+  const indexFile = ''
 
-uploadFolderAndPay(path,priv,url,tag, indexFile).then((res)=>{
+  const res = await uploadFolderAndPay(path,priv,arseedUrl,tag, indexFile)
   console.log(res)
-}).catch((e)=>{
-    console.log(e)
-})
+}
 
 // review manifest Data
 curl --location --request GET 'https://arseed.web3infra.dev/{res.maniId}'
@@ -50,12 +49,12 @@ node demo.js
 
 正确执行后终端将返回：
 
-```json
+```tsx
 {
   fee: '0.004218',
-  maniId: 'EHeDa8b428L38b972qyHI87YELuZKue1jDI_JWC-aGE'
+  maniId: 'EHeDa8b428L38b972qyHI87YELuZKue1jDI_JWC-aGE',
 	everHash:[
-			0x46744320be6529c48bf18c348fa181facef3d9d6d920a24687dc9964ba3ead0a
+			'0x46744320be6529c48bf18c348fa181facef3d9d6d920a24687dc9964ba3ead0a'
 	]
 }
 ```
